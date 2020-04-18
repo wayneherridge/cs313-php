@@ -10,24 +10,27 @@
 </head>
 
 <body>
+    <h1>This is my Hello World application</h1>
     <h3>Click 'Clear' and enter a new message in the box.</h3>
-    <input v-model="message" />
-    <button @click="clearMessage">Clear</button>
-    <h1>{{message}}</h1>
+    <div id="app">
+        <input v-model="message" />
+        <button @click="clearMessage">Clear</button>
+        <h1>{{message}}</h1>
+
+    </div>
 
     <script>
-        export default {
-            data() {
-                return {
-                    message: 'Hello World!'
-                }
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!'
             },
             methods: {
                 clearMessage() {
                     this.message = ''
                 }
-            },
-        }
+            }
+        })
     </script>
 </body>
 
