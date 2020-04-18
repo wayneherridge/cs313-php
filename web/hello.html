@@ -10,12 +10,11 @@
 </head>
 
 <body>
-    <div id="app">
-        <h3>Click 'Clear' and enter a new message in the box.</h3>
-        <input v-model="message" />
-        <button @click="clearMessage">Clear</button>
-        <h1>{{message}}</h1>
-    </div>
+    <h3>Click 'Clear' and enter a new message in the box.</h3>
+    <input v-model="message" />
+    <button @click="clearMessage">Clear</button>
+    <h1>{{message}}</h1>
+
     <script>
         export default {
             data() {
@@ -31,7 +30,5 @@
         }
     </script>
 </body>
-
-</html>
 
 </html>
