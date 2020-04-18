@@ -11,18 +11,24 @@
 
 <body>
     <div id="app">
-        <h3>Hello World!</h3>
-        <p>This is my {{message}} program</p>
+        <h2>Hello World message application</h2>
+        <p>Please click below:</p>
+        <button v-on:click="say('Hello World')">Say Hello World</button>
     </div>
 
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                message: 'Hello World'
-            }
-        })
+        new Vue
+            ({
+                el: '#app',
+                methods: {
+                    say: function(message) {
+                        alert(message)
+                    }
+                }
+            })
     </script>
 </body>
+
+</html>
 
 </html>
