@@ -13,20 +13,17 @@
     <div id="app">
         <h2>Hello World message application</h2>
         <p>Please click below:</p>
-        <button v-on:click="say('Hello World')">Say Hello World</button>
-    </div>
-
-    <script>
-        new Vue
-            ({
-                el: '#app',
-                methods: {
-                    say: function(message) {
-                        alert(message)
+        <h1>{{message}}</h1>
+        <button></button>
+        <script>
+            export default {
+                data() {
+                    return {
+                        message: 'Hello World!'
                     }
                 }
-            })
-    </script>
+            }
+        </script>
 </body>
 
 </html>
