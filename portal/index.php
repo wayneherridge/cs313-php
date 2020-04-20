@@ -7,13 +7,16 @@
   </head>
   <body>
     <header>
-
+      <h3>Wayne S. Herridge</h3>
+      <hr />
     </header>
     <nav>
         <ul>
           <li></li>
         </ul>
     </nav>
+
+      <!-- footer.php -->
       <?php include 'footer.php';?>
     </body>
 </html>
