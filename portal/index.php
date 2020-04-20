@@ -7,14 +7,15 @@
   </head>
   <body>
     <header>
+      <figure>
+        <img src="" alt="Wayne Herridge">
+      </figure>
       <h3>Wayne S. Herridge</h3>
+      <h6></h6>
       <hr />
     </header>
-    <nav>
-        <ul>
-          <li></li>
-        </ul>
-    </nav>
+      <!-- nav.php -->
+      <?php include 'nav.php'; ?>
 
       <!-- footer.php -->
       <?php include 'footer.php';?>
