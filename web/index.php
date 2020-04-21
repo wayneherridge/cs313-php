@@ -11,7 +11,7 @@
     <?php include 'shared/header.php' ?>
 
     <!-- nav.php -->
-    <?php include 'nav.php'; ?>
+    <?php include 'shared/nav.php'; ?>
 
     <main>
       <section class="hero">
@@ -27,7 +27,7 @@
     </main>
 
     <!-- footer.php -->
-    <?php include 'footer.php';?>
+    <?php include 'shared/footer.php';?>
 
     <!-- link to JS scripts -->
     <script src="js/scripts.js"></script>
