@@ -2,7 +2,7 @@
   <figure>
     <img src="" alt="Wayne Herridge">
   </figure>
-  <h3>Wayne S. Herridge</h3>
-  <h6>All about me</h6>
+  <h2>Wayne S. Herridge</h2>
+  <h4>All about me</h4>
   <hr />
 </header>
