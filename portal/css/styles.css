@@ -1,0 +1,104 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/*---apply a natural box layout model to all elements ---*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+nav button {
+  margin: .2rem 2%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.6rem;
+  color: #555;
+}
+
+nav {
+  background-color: #ccc;
+  font-family: Verdana, sans-serif;
+  max-width: 1720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: .8rem 2%;
+  text-decoration: none;
+  border-top: 1px solid rgb(0,0,0,0.3);
+}
+
+nav ul li.active a {
+  background-color: rgba(0,0,0,0.2);
+  color: #fff;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0,0,0,0.4);
+}
+
+nav ul.hide {
+  display: none;
+}
+
+/* 35em is also 560px when basefont is 16px */
+@media only screen and (min-width: 35em) {
+
+  nav button {
+    display: none;
+  }
+
+  nav ul.hide {
+    display: block;
+  }
+
+  nav ul {
+    margin-left: 2%;
+  }
+
+  nav ul li {
+    float: left;
+  }
+
+  nav ul li a {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,0.3);
+    padding: .8rem 1rem;
+  }
+
+} /* end medium */
+
+/* 64em is also 1028px when basefont is 16px */
+@media only screen and (min-width: 64rem) {
+
+  nav ul li a {
+    padding: .6rem 1rem;
+  }
+
+  nav ul li a {
+    border: none;
+    border-right: 1px solid rgba(0,0,0,0.3);
+    padding: .6rem 1rem;
+  }
+
+} /* end large */
+
+/* -- ClearFix force an element not to collapse --*/
+.Clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

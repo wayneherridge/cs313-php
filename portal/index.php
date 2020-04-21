@@ -2,22 +2,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
   <body>
-    <header>
-      <figure>
-        <img src="" alt="Wayne Herridge">
-      </figure>
-      <h3>Wayne S. Herridge</h3>
-      <h6></h6>
-      <hr />
-    </header>
-      <!-- nav.php -->
-      <?php include 'nav.php'; ?>
+    <!-- header.php -->
+    <?php include 'header.php' ?>
 
-      <!-- footer.php -->
-      <?php include 'footer.php';?>
-    </body>
+    <!-- nav.php -->
+    <?php include 'nav.php'; ?>
+
+    <main>
+      <section class="hero">
+        <figure>
+          <img src="" alt="hero">
+        </figure>
+      </section>
+
+      <section>
+          <h3>Welcome Section</h3>
+      </section>
+
+    </main>
+
+    <!-- footer.php -->
+    <?php include 'footer.php';?>
+
+    <!-- link to JS scripts -->
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
