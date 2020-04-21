@@ -1,50 +1,80 @@
-/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+    /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 
-html {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-}
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+    /*---apply a natural box layout model to all elements ---*/
 
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 
-/*---apply a natural box layout model to all elements ---*/
-
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-nav button {
-    margin: .2rem 2%;
-    background-color: transparent;
-    border: none;
-    font-size: 1.6rem;
-    color: #555;
-}
-
-nav ul.hide {
-    display: none;
-}
-
-
-/* 35em is also 560px when basefont is 16px */
-
-@media only screen and (min-width: 35em) {
     nav button {
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: #555;
+    }
+
+    nav ul.hide {
         display: none;
     }
-    nav ul.hide {
-        display: block;
+
+    .main-head {
+        grid-area: header;
     }
-}
 
+    .content {
+        grid-area: content;
+    }
 
-/* end medium */
+    .main-nav {
+        grid-area: nav;
+    }
 
+    .main-footer {
+        grid-area: footer;
+    }
 
-/* 64em is also 1028px when basefont is 16px */
+    .wrapper {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas:
+        "header"
+        "nav"
+        "content"
+        "footer";
+    }
+    /* 35em is also 560px when basefont is 16px */
 
-@media only screen and (min-width: 64rem) {}
+    @media only screen and (min-width: 35em) {
+        nav button {
+            display: none;
+        }
 
+        nav ul{
+          display: flex;
+          justify-content: space-between;
+        }
 
-/* end large */
+        nav ul.hide {
+            display: block;
+        }
+        .wrapper {
+          grid-template-columns: 1fr 3fr;
+          grid-template-areas:
+          "header  header"
+          "nav     nav"
+          "content content"
+          "footer  footer";
+        }
+    }
+    /* end medium */
+    /* 64em is also 1028px when basefont is 16px */
+
+    @media only screen and (min-width: 64rem) {}
+    /* end large */
