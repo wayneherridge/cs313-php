@@ -76,5 +76,18 @@
     /* end medium */
     /* 64em is also 1028px when basefont is 16px */
 
-    @media only screen and (min-width: 64rem) {}
+    @media only screen and (min-width: 64rem) {
+      .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header  header"
+      "nav    content content"
+      "nav    content content"
+      "footer footer footer"
+   }
+   nav ul {
+     flex-direction: column;
+   }
+      }
+    }
     /* end large */
