@@ -121,10 +121,10 @@ footer {
 
 /* Background Styles Only */
 
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap');
 
 * {
-    font-family: Raleway;
+  font-family: 'Comic Neue', cursive;
 }
 
 html {
