@@ -8,8 +8,8 @@
           </a>
           <div class="navbar-links">
             <ul>
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">My Assignments</a></li>
+              <li><a href="index.php">About Me</a></li>
+              <li><a href="assignments.php">My Assignments</a></li>
             </ul>
           </div>
         </nav>
