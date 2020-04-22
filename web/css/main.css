@@ -16,6 +16,9 @@ body {
 
 main {
   margin-bottom: auto;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 footer {
@@ -126,8 +129,4 @@ footer {
 
 html {
     background-color: #DFDFDF;
-}
-
-main {
-  margin: 0.5rem;
 }
