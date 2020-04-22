@@ -2,14 +2,32 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html {
     margin: 0;
     padding: 0;
+}
 
-    display: table;
-    height: 100%;
-    width: 100%;
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: teal;
+}
+
+main {
+  margin-bottom: auto;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: red;
 }
 
 .navbar {
@@ -100,12 +118,6 @@ body {
     .navbar-links.active {
         display: flex;
     }
-}
-
-footer {
-  width: 100%;
-  height: 100px;
-  background-color: red;
 }
 
 /* Background Styles Only */
