@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
   </head>
   <body>
     <div class="grid-container">
@@ -22,5 +24,9 @@
 </div>
     <!-- footer.php -->
     <?php include 'shared/footer.php';?>
+
+    <!-- link to JS scripts -->
+    <script src="js/scripts.js"></script>
+    
   </body>
 </html>
