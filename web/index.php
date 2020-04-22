@@ -8,14 +8,8 @@
     <!-- Stylesheet Links -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/normalize.css">
-
-    <!-- link to JS scripts -->
-    <script src="js/scripts.js"></script>
   </head>
   <body>
-
-
-
 
     <!-- header.php -->
     <?php include 'shared/header.php' ?>
@@ -29,5 +23,7 @@
     <!-- footer.php -->
     <?php include 'shared/footer.php';?>
 
+    <!-- link to JS scripts -->
+    <script src="js/scripts.js"></script>
   </body>
 </html>
