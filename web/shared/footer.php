@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer>
 <?php
 echo "<p>&copy;" . date("Y") . " Wayne Herridge</p>";
 ?>
