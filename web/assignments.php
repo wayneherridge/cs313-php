@@ -9,10 +9,7 @@
   <body>
     <div class="grid-container">
     <!-- header.php -->
-    <?php include 'header.php' ?>
-
-    <!-- nav.php -->
-    <?php include 'nav.php'; ?>
+    <?php include 'shared/header.php' ?>
 
     <main class="main">
       <figure>
@@ -24,6 +21,6 @@
     </main>
 </div>
     <!-- footer.php -->
-    <?php include 'footer.php';?>
+    <?php include 'shared/footer.php';?>
   </body>
 </html>
