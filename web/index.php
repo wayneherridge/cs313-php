@@ -22,7 +22,7 @@
             <img src="images/wayne_and_evanna.jpg" alt="this is me">
           </figure>
         </div>
-        <div class="">
+        <div class="my-info">
           <h1>welcome</h1>
           <p></p>
         </div>
