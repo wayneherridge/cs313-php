@@ -103,7 +103,7 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  main {
+  nav, main {
     max-width: 75rem;
     margin: auto;
   }
