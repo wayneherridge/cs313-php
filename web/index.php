@@ -16,8 +16,18 @@
 
 
     <main>
-      <h1>welcome</h1>
-      <p></p>
+      <div class="content-wrapper">
+        <div class="my-photo">
+          <figure>
+            <img src="images/wayne_and_evanna.jpg" alt="this is me">
+          </figure>
+        </div>
+        <div class="">
+          <h1>welcome</h1>
+          <p></p>
+        </div>
+      </div>
+
     </main>
 
     <!-- footer.php -->
