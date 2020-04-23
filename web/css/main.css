@@ -80,6 +80,7 @@ main {
 
 .content-wrapper {
   display: flex;
+  align-items: flex-start;
   margin: 0 auto;
   border: 1px solid;
   padding: 5px;
@@ -135,6 +136,9 @@ footer {
 
     .content-wrapper {
       flex-wrap: wrap;
+    }
+    .content {
+      text-align: center;
     }
 }
 
