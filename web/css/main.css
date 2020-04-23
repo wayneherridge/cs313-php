@@ -88,6 +88,10 @@ footer {
 
 .content-wrapper {
   display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: minmax(200px auto) 400px minmax(300px, auto);
+  grid-auto-rows: minmax(300px, auto);
+  grid-gap: 20px; 
 }
 
 @media only screen and (max-width: 800px) {
