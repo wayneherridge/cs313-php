@@ -103,11 +103,8 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  nav, main {
-    max-width: 75rem;
-    margin: auto;
-  }
     .navbar {
+        max-width: 75rem;
         flex-direction: column;
         align-items: flex-start;
     }
