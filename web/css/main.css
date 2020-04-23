@@ -125,6 +125,10 @@ footer {
     .navbar-links.active {
         display: flex;
     }
+
+    .content-wrapper {
+      flex-wrap: wrap;
+    }
 }
 
 /* Background Styles Only */
