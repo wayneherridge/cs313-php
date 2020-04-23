@@ -17,12 +17,12 @@
 
     <main>
       <div class="content-wrapper">
-        <div class="my-photo">
+        <div class="content my-photo">
           <figure>
             <img src="images/wayne_and_evanna.jpg" alt="this is me">
           </figure>
         </div>
-        <div class="my-info">
+        <div class="content my-info">
           <h3>About me</h3>
           <p>My name is Wayne Herridge. I am from the South Coast of England.</p>
           <p>I am currently studying Applied Technology with Brigham Young University - Idaho.</p>
