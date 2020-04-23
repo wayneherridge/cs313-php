@@ -79,9 +79,18 @@ main {
 }
 
 .content-wrapper {
-  display: flex;
+  width: 600px;
   margin: 0 auto;
-  padding: 0;
+  margin-top: 25px;
+  border: 1px solid;
+  padding: 5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .my-photo img {
