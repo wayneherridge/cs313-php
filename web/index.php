@@ -23,8 +23,9 @@
           </figure>
         </div>
         <div class="my-info">
-          <h1>welcome</h1>
-          <p></p>
+          <h1>About me</h1>
+          <p>My name is Wayne Herridge. I am from the South Coast of England.</p>
+          <p>I am currently studying Applied Technology with BYUI.</p>
         </div>
       </div>
 
