@@ -87,7 +87,11 @@ footer {
 }
 
 .content-wrapper {
-  display: flex; 
+  display: flex;
+}
+
+.my-photo {
+  border-radius: 5%;
 }
 
 @media only screen and (max-width: 800px) {

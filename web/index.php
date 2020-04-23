@@ -23,9 +23,9 @@
           </figure>
         </div>
         <div class="my-info">
-          <h1>About me</h1>
+          <h3>About me</h3>
           <p>My name is Wayne Herridge. I am from the South Coast of England.</p>
-          <p>I am currently studying Applied Technology with BYUI.</p>
+          <p>I am currently studying Applied Technology with Brigham Young University - Idaho.</p>
         </div>
       </div>
 
