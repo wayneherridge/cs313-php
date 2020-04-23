@@ -5,6 +5,8 @@
 html {
     margin: 0;
     padding: 0;
+    max-width: 75rem;
+
 }
 
 body {
@@ -104,7 +106,6 @@ footer {
 
 @media only screen and (max-width: 800px) {
     .navbar {
-        max-width: 75rem;
         flex-direction: column;
         align-items: flex-start;
     }
