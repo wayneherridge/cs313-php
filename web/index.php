@@ -16,17 +16,7 @@
 
   <?php include 'shared/header.php' ?>
 
-  <header>
-    <h1>Wayne S. Herridge</h1>
-    <h2>Me, My Assignments, and I</h2>
-  </header>
-
-<nav>
-  <ul>
-    <li><a href="index.php">About Me</a></li>
-    <li><a href="assignments.php">My Assignments</a></li>
-  </ul>
-  </nav>
+  <?php include 'shared/nav.php' ?>
 
 <main>
     <h1>About Me</h1>
