@@ -50,16 +50,27 @@ nav a:hover {
   background-color: #444;
 }
 
+.clearFix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* medium screen */
 @media only screen and (min-width: 560px) {
 
   nav li {
-    display: inline-block;
+    float: left;
+    width: 25%;
   }
 
 } /* end of media query */
 
 /* large screen */
 @media only screen and (min-width: 1028px) {
+
+  nav li {
+    width: auto;
+  }
 
 } /* end of media query */
