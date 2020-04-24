@@ -103,8 +103,8 @@ main figure {
 }
 
 .flex-container > div {
-  background-color: #f1f1f1;
   text-align: left;
+  margin: 10px;
 }
 
   .main-image {

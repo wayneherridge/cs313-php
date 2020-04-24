@@ -28,9 +28,11 @@
     </figure>
   </div>
 
-    <div class="flex-item2">
-      <h1>About Me</h1>
-      <p>Welcome para</p>
+    <div class="about-me">
+      <h3>This is a little about me</h3>
+      <p>Name: Wayne Herridge</p>
+      <p>Studying: Applied Technology at Brigham Young University</p>
+
     </div>
 
   </div>
