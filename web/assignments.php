@@ -17,8 +17,10 @@
 
     <main>
       <div class="content-wrapper">
-        <h1>My Assignments and Projects by Week</h1>
-        <p>Week1 : <a href="https://still-dawn-71018.herokuapp.com/hello.html">Hello World</a></p>
+        <div class="content assignments">
+          <h1>My Assignments and Projects by Week</h1>
+          <p>Week1 : <a href="https://still-dawn-71018.herokuapp.com/hello.html">Hello World</a></p>
+        </div>
       </div>
     </main>
 
