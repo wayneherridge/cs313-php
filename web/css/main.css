@@ -63,6 +63,7 @@ main h1 {
 }
 
 .main-grid figure {
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -114,6 +115,11 @@ main h1 {
   }
   nav a {
     padding: .5rem 1rem;
+  }
+
+  .main-grid figure {
+    margin: 0;
+    width: 28%;
   }
 
 } /* end of media query */
