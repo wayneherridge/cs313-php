@@ -93,7 +93,7 @@ main {
 }
 
 .my-photo img {
-  width: 50%;
+  width: 100%;
   border-radius: 5%;
 }
 
