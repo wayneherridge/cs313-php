@@ -117,9 +117,4 @@ main h1 {
     padding: .5rem 1rem;
   }
 
-  .main-grid figure {
-    margin: 0;
-    width: 28%;
-  }
-
 } /* end of media query */
