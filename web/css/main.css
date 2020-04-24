@@ -100,7 +100,7 @@ main figure {
     grid-template-columns: auto auto;
   }
 
-  .main-grid figure {
+  main figure img {
     margin: 0;
     width: 48%;
   }
