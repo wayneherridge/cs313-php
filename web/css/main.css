@@ -99,7 +99,7 @@ main figure {
     display: grid;
   }
 
-  main figure {
+  .main-grid figure {
     width: 48%;
     margin-left: 2%;
   }
