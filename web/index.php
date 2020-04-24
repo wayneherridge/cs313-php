@@ -22,7 +22,7 @@
 <main>
     <h1>About Me</h1>
 
-    <img src="" alt="Picture of Wayne">
+    <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
 
     <p>Welcome para</p>
 
