@@ -95,8 +95,9 @@ main figure {
     width: 25%;
   }
 
-  .container {
+  .grid-container {
     display: grid;
+    grid-template-columns: auto auto;
   }
 
   .main-grid figure {
