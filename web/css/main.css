@@ -96,13 +96,12 @@ main figure {
   }
 
   .container {
-    margin:0;
     display: grid;
   }
 
   .main-grid figure {
+    margin: 0;
     width: 48%;
-    margin-left: 2%;
   }
 
 } /* end of media query */
