@@ -95,6 +95,10 @@ footer {
     text-align: left;
   }
 
+  .header-container {
+    display: inline-grid;
+  }
+
   nav li {
     float: left;
     width: 25%;
