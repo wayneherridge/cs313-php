@@ -97,9 +97,8 @@ main figure {
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
   }
-
 
   .main-grid figure {
     margin: 0;
