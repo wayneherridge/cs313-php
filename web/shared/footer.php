@@ -2,7 +2,8 @@
 <footer class="page-footer font-small blue fixed-bottom">
 
   <!-- Copyright -->
-  <?php echo "<p>&copy;" . date("Y") . " Wayne Herridge</p>";?>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Wayne Herridge
+  </div>
   <!-- Copyright -->
 
 </footer>
