@@ -64,11 +64,16 @@ main h1 {
 
 main figure img {
   width: 100%;
+  border-radius: 10px;
 }
 
 main figure {
   width: 100%;
   margin: 0;
+}
+
+.about-me {
+  text-align: left;
 }
 
 
