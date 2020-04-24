@@ -97,20 +97,15 @@ main figure {
     width: 25%;
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-areas:
-      "photo about"
-  }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
 
-  .grid-item1 {
-    grid-area: photo;
-  }
-
-  .grid-item2 {
-    grid-area: about;
-  }
+.flex-container > div {
+  background-color: #f1f1f1;
+  text-align: left;
+}
 
   main figure img {
     margin: 0;

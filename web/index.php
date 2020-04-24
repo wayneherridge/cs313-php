@@ -20,15 +20,15 @@
   <?php include 'shared/nav.php' ?>
 
 <main>
-  <div class="grid-container">
+  <div class="flex-container">
 
-  <div class="grid-item1">
+  <div class="flex-item1">
     <figure>
       <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
     </figure>
   </div>
 
-    <div class="grid-item2">
+    <div class="flex-item2">
       <h1>About Me</h1>
       <p>Welcome para</p>
     </div>
