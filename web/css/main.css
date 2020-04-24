@@ -117,6 +117,10 @@ main figure {
 /* large screen */
 @media only screen and (min-width: 1028px) {
 
+  main {
+    max-width: 75rem;
+  }
+
   nav ul {
     padding-left: 2%;
   }
