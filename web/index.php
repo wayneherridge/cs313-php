@@ -27,9 +27,20 @@
     </div>
   </div>
 
-  <figure class="figure">
-    <img src="/images/wayne_and_evanna.jpg" class="figure-img img-fluid rounded" alt="...">
-</figure>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <figure class="figure">
+          <img src="/images/wayne_and_evanna.jpg" class="figure-img img-fluid rounded" alt="...">
+      </figure>
+      </div>
+      <div class="col-sm">
+        One of three columns
+      </div>
+    </div>
+  </div>
+
+
 
 </main>
 
