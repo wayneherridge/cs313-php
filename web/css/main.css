@@ -97,7 +97,7 @@ main figure {
     width: 25%;
   }
 
-  .wrapper {
+  .grid-container {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
