@@ -99,10 +99,10 @@ main figure {
 
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     grid-template-areas:
-    "photo photo"
-    "about about"
+    "photo photo photo"
+    "about about about"
   }
 
   .grid-item1 {
