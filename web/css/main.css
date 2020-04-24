@@ -1,166 +1,31 @@
 * {
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html {
-    margin: auto;
-    padding: 0;
-    max-width: 75rem;
-
-}
-
+/* body rules here */
 body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+  font-family: Verdana;
+  font-size: 16px;
 }
 
-.navbar {
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
+/* header rules here */
+header {
+  background-color: blue;
+  padding: 1rem 2%;
 }
 
-.brand-title {
-    font-size: 1.5rem;
-    margin: .5rem;
+header h1, header h2 {
+  margin: 0;
 }
 
-.navbar-links {
-    height: 100%;
-}
+/* medium screen */
+@media only screen and (min-width: 560px) {
 
-.navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+} /* end of media query */
 
-.navbar-links li {
-    list-style: none;
-}
+/* large screen */
+@media only screen and (min-width: 1028px) {
 
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-}
-
-.navbar-links li:hover {
-    background-color: #555;
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-
-main {
-  margin-bottom: auto;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-.content-wrapper {
-  display: flex;
-  align-items: flex-start;
-  margin: 0 auto;
-  border: 1px solid;
-  padding: 5px;
-}
-
-.content {
-  margin: auto;
-}
-
-main figure.my-photo {
-  width: 20%;
-  border-radius: 5%;
-}
-
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #333;
-  color: white;
-  text-align: center;
-}
-
-@media only screen and (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links ul li {
-        text-align: center;
-    }
-
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .content-wrapper {
-      flex-wrap: wrap;
-    }
-    .content {
-      text-align: center;
-    }
-    figure.my-photo img {
-      width: 20%;
-    }
-}
-
-/* Background Styles Only */
-
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Shadows Into Light',sans-serif;
-}
-
-html {
-    background-color: #DFDFDF;
-}
+} /* end of media query */
