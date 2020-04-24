@@ -50,6 +50,27 @@ nav a:hover {
   background-color: #444;
 }
 
+/* main rules here */
+main {
+  padding: 1rem 2%;
+  display: block;
+}
+
+main h1 {
+  color: blue;
+}
+
+main figure img {
+  width: 100%;
+}
+
+main figure {
+  width: 100%;
+  margin: 0;
+}
+
+
+/* Clear Fix */
 .clearFix:after {
   content: "";
   display: table;
@@ -62,6 +83,12 @@ nav a:hover {
   nav li {
     float: left;
     width: 25%;
+  }
+
+  main figure {
+    float: right;
+    width: 48%;
+    margin-left: 2%;
   }
 
 } /* end of media query */
