@@ -1,3 +1,8 @@
 html {
   max-width: 768px;
+  margin: auto;
+}
+
+.jumbotron {
+  height: 300px;
 }
