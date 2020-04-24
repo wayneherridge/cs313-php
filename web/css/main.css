@@ -119,6 +119,7 @@ main figure {
 
   main {
     max-width: 75rem;
+    margin: auto;
   }
 
   nav ul {
