@@ -22,13 +22,13 @@
 <main>
   <div class="grid-container">
 
-  <div class="grid-item photo">
+  <div class="grid-item1">
     <figure>
       <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
     </figure>
   </div>
 
-    <div class="grid-item about-me">
+    <div class="grid-item2">
       <h1>About Me</h1>
       <p>Welcome para</p>
     </div>
