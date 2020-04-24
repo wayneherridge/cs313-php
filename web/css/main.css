@@ -96,6 +96,7 @@ main figure {
   }
 
   .container {
+    margin:0;
     display: grid;
   }
 
