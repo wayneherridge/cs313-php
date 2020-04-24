@@ -97,6 +97,7 @@ main figure {
 
   .container {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .main-grid figure {
