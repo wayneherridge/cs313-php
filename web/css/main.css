@@ -72,6 +72,9 @@ main figure {
   margin: 0;
 }
 
+footer {
+
+}
 
 
 /* Clear Fix */
@@ -118,7 +121,7 @@ main figure {
 @media only screen and (min-width: 1028px) {
 
   nav,
-  header, 
+  header,
   main,
   footer {
     max-width: 75rem;
