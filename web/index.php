@@ -20,11 +20,13 @@
   <?php include 'shared/nav.php' ?>
 
 <main>
-    <h1>About Me</h1>
+  <div class="container">
 
     <figure>
       <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
     </figure>
+
+    <h1>About Me</h1>
 
     <p>Welcome para</p>
 
@@ -37,6 +39,8 @@
 
       <p>para4</p>
     </div>
+
+  </div>
 
   </main>
 

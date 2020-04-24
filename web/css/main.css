@@ -85,6 +85,10 @@ main figure {
     width: 25%;
   }
 
+  .container {
+    display: grid;
+  }
+
   main figure {
     width: 48%;
     margin-left: 2%;
