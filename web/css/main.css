@@ -62,9 +62,13 @@ main h1 {
   color: blue;
 }
 
-.grid-item figure {
+main figure img {
   width: 100%;
-  border-radius: 10px;
+}
+
+main figure {
+  width: 100%;
+  margin: 0;
 }
 
 
@@ -96,7 +100,7 @@ main h1 {
     grid-template-columns: auto auto;
   }
 
-  .grid-item figure {
+  .main-grid figure {
     margin: 0;
     width: 48%;
   }
