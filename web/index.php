@@ -22,16 +22,12 @@
 <main>
   <div class="container">
 
-  <div class="main-grid photo">
     <figure>
       <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
     </figure>
-  </div>
 
-    <div class="main-grid about-me">
       <h1>About Me</h1>
       <p>Welcome para</p>
-    </div>
 
   </div>
 
