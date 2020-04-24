@@ -101,8 +101,7 @@ main figure {
     display: grid;
     grid-template-columns: repeat(2, auto);
     grid-template-areas:
-    "photo photo photo"
-    "about about about"
+      "photo about"
   }
 
   .grid-item1 {
