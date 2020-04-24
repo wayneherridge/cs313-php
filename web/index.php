@@ -22,7 +22,7 @@
 <main>
   <div class="flex-container">
 
-  <div class="flex-item1">
+  <div class="main-image">
     <figure>
       <img src="/images/wayne_and_evanna.jpg" alt="Picture of Wayne">
     </figure>

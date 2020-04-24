@@ -107,7 +107,7 @@ main figure {
   text-align: left;
 }
 
-  main figure img {
+  .main-image {
     margin: 0;
     width: 48%;
   }
