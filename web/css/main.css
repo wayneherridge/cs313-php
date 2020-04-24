@@ -93,7 +93,7 @@ main {
 }
 
 .my-photo img {
-  width: 100%;
+  width: 50%;
   border-radius: 5%;
 }
 
@@ -142,6 +142,10 @@ footer {
     }
     .content {
       text-align: center;
+    }
+    .my-photo img {
+      width: 20%;
+      border-radius: 5%;
     }
 }
 
