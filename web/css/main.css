@@ -62,13 +62,8 @@ main h1 {
   color: blue;
 }
 
-main figure img {
-  width: 100%;
-}
-
-main figure {
-  width: 100%;
-  margin: 0;
+.main-grid figure {
+  border-radius: 10px;
 }
 
 
