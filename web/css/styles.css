@@ -3,7 +3,8 @@
     margin: 0;
 }
 
-html {
+html,
+.footer {
     max-width: 768px;
     margin: auto;
 }
@@ -48,10 +49,8 @@ button {
     width: 100px;
 }
 
-.container {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
+main {
+    margin: 20px;
 }
 
 .footer {
