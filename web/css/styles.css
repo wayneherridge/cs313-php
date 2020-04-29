@@ -53,3 +53,7 @@ button {
     max-width: 680px;
     padding: 0 15px;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+}
