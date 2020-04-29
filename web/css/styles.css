@@ -4,8 +4,8 @@
 }
 
 html {
-  max-width: 768px;
-  margin: auto;
+    max-width: 768px;
+    margin: auto;
 }
 
 body {
@@ -49,14 +49,7 @@ button {
 }
 
 .container {
-  width: auto;
-  max-width: 680px;
-  padding: 0 15px;
-}
-
-footer {
-    position: fixed;
-    height: 100px;
-    bottom: 0;
-    width: 100%;
+    width: auto;
+    max-width: 680px;
+    padding: 0 15px;
 }
