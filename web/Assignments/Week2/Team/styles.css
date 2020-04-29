@@ -27,11 +27,3 @@ body {
 div p:hover {
   font-weight: bold;
 }
-
-button {
-  padding: 10px;
-}
-
-div, label, input, button {
-  margin: 5px;
-}
