@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+#div1 {
+  background-color: green;
+  color: white;
+  font-size: 2.5em;
+}
+
+#div2 {
+  background-color: yellow;
+  font-size: 1.5em;
+}
+
+#div3 {
+  background-color: blue;
+  color: white;
+  font-size: 1.25em;
+}
+
+div p:hover {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+}
+
+div, label, input, button {
+  margin: 5px;
+}
