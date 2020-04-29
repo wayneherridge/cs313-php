@@ -21,9 +21,11 @@
 
 <main>
   <!-- Site title -->
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Singer/Songwriter....Sometimes</h1>
-  <p class="lead">I like music and when I have time I sometimes write my own songs</p>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Singer/Songwriter....Sometimes</h1>
+    <p class="lead">I like music and when I have time I sometimes write my own songs</p>
+  </div>
 </div>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
