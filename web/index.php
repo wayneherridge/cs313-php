@@ -38,9 +38,6 @@
       </div>
     </div>
   </div>
-
-
-
 </main>
 
   <!-- footer.php -->
