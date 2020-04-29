@@ -27,6 +27,6 @@ $(document).ready(function() {
     $("#div1").css("background-color", colorValue);
   });
   $("#fadeOut").click(function(){
-    $("#div3").fadeToggle(700);
+    $("#card-fade").fadeToggle(700);
   });
 });

@@ -15,25 +15,47 @@
 
   <body>
 
-    <div id="div1">
-      <p>This is my first Div</p>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4">Team Assignment - Week 2</h1>
     </div>
 
-    <div id="div2">
-      <p>This is my second Div</p>
-    </div>
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">div1</h4>
+          </div>
+          <div id="div1" class="card-body">
+            <p class="card-title pricing-card-title">This is my first div</p>
+          </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0">div2</h4>
+          </div>
+          <div id="div2" class="card-body">
+            <p class="card-title pricing-card-title">This is my second div</p>
+          </div>
+        </div>
+        <div id="card-fade" class="card mb-4 shadow-sm">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">div3</h4>
+          </div>
+          <div id="div3" class="card-body">
+            <p class="card-title pricing-card-title">This is my third div</p>
+          </div>
+        </div>
+      </div>
 
-    <div id="div3">
-      <p>This is my third Div</p>
-    </div>
 
-    <button onclick="clickME();">Click Me</button><br>
+    <button type="button" class="btn btn-info" onclick="clickME();">Click Me</button><br>
 
-    <label for="colorInput">Enter Color:</label><br>
-    <input type="text" id="colorInput" name="colorInput" placeholder="#FFFF00, red, etc"><br>
-    <button id="colorChange">Change Color</button><br>
+<div class="">
+    <label for="colorInput">Enter Color:</label>
+    <input type="text" id="colorInput" name="colorInput" placeholder="#FFFF00, red, etc">
 
-    <button id="fadeOut">Fade Out</button>
+    <button type="button" class="btn btn-info" id="colorChange">Change Color of First Div</button><br>
+    <button type="button" class="btn btn-info" id="fadeOut">Fade Out Third Div</button>
 
     <!-- bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
