@@ -22,22 +22,23 @@
 <main>
   <!-- Site title -->
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Music Writer</h1>
+  <h1 class="display-5">Music Writer....Sometimes</h1>
   <p class="lead">I like music and when I have time I sometimes write my own songs</p>
 </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <figure class="figure">
-          <img src="/images/wayne_and_evanna.jpg" class="figure-img img-fluid rounded" alt="...">
-      </figure>
-      </div>
-      <div class="col-sm">
-        This is me on the right - welcome to my site.
-      </div>
-    </div>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner">
+  <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
   </div>
+  <div class="carousel-item">
+    <img src="..." class="d-block w-100" alt="...">
+  </div>
+  <div class="carousel-item">
+    <img src="..." class="d-block w-100" alt="...">
+  </div>
+</div>
+</div>
 </main>
 
   <!-- footer.php -->
