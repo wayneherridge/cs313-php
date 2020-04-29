@@ -47,6 +47,10 @@ main {
     margin: 20px;
 }
 
+.carousel-inner img {
+    margin: auto;
+}
+
 footer {
     background-color: grey;
     color: white;
