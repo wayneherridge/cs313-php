@@ -9,7 +9,7 @@
 
     <!-- Stylesheet Links -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/normalize.css">
 
 </head>
@@ -22,7 +22,7 @@
 <main>
   <!-- Site title -->
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Music</h1>
+  <h1 class="display-5">Music Writer</h1>
   <p class="lead">I like music and when I have time I sometimes write my own songs</p>
 </div>
 
