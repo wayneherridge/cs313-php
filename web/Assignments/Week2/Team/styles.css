@@ -8,18 +8,18 @@ body {
 }
 
 #div1 {
-  background-color: green;
+  background-color: #941C2F;
   color: white;
   font-size: 2.5em;
 }
 
 #div2 {
-  background-color: yellow;
+  background-color: #59F8E8;
   font-size: 1.5em;
 }
 
 #div3 {
-  background-color: blue;
+  background-color: #20A4F3;
   color: white;
   font-size: 1.25em;
 }

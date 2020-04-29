@@ -21,12 +21,10 @@
 
 <main>
   <!-- Site title -->
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Wayne S. Herridge</h1>
-      <p class="lead">Me, Myself, and I</p>
-    </div>
-  </div>
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Pricing</h1>
+  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+</div>
 
   <div class="container">
     <div class="row">
