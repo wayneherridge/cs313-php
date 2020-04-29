@@ -23,7 +23,7 @@
   <!-- Site title -->
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Singer/Songwriter....Sometimes</h1>
+    <h1 class="display-5">Singer/Songwriter....Sometimes</h1>
     <p class="lead">I like music and when I have time I sometimes write my own songs</p>
   </div>
 </div>
