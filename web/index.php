@@ -22,20 +22,23 @@
 <main>
   <!-- Site title -->
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5">Music Writer....Sometimes</h1>
+  <h1 class="display-5">Singer/Songwriter....Sometimes</h1>
   <p class="lead">I like music and when I have time I sometimes write my own songs</p>
 </div>
 
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
   <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="images/guitar.jpg" class="d-block w-100" alt="Guitar">
   </div>
   <div class="carousel-item">
-    <img src="..." class="d-block w-100" alt="...">
+    <img src="images/headphones.jpg" class="d-block w-100" alt="Headphones">
   </div>
   <div class="carousel-item">
-    <img src="..." class="d-block w-100" alt="...">
+    <img src="images/mixer.jpg" class="d-block w-100" alt="Sound Mixer">
+  </div>
+  <div class="carousel-item">
+      <img src="images/speaker.jpg" class="d-block w-100" alt="Speaker">
   </div>
 </div>
 </div>
