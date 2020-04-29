@@ -23,12 +23,12 @@
   <!-- Site title -->
   <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-5">Singer/Songwriter....Sometimes</h1>
+    <h1 class="display-5">Singer/Songwriter</h1>
     <p class="lead">I like music and when I have time I sometimes write my own songs</p>
   </div>
 </div>
 
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="carouselSlidesOnly" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
   <div class="carousel-item active">
       <img src="images/guitar.jpg" class="d-block w-75" alt="Guitar">
