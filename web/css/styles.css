@@ -1,8 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
 html,
 footer {
     max-width: 768px;
@@ -54,11 +49,12 @@ main {
 }
 
 .footer {
+    margin: 5px;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: grey;
     color: white;
     text-align: center;
 }
