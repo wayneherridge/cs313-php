@@ -1,3 +1,3 @@
-<footer class="footer">
+<footer>
   <small>© 2020 Copyright: Wayne Herridge</small>
 </footer>

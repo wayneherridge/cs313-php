@@ -1,5 +1,4 @@
-html,
-footer {
+html {
     max-width: 768px;
     margin: auto;
 }
@@ -48,12 +47,7 @@ main {
     margin: 20px;
 }
 
-.footer {
-    margin: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+footer {
     background-color: grey;
     color: white;
     text-align: center;
