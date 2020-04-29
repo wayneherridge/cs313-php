@@ -34,7 +34,7 @@
       </figure>
       </div>
       <div class="col-sm">
-        One of three columns
+        This is me on the right - welcome to my site.
       </div>
     </div>
   </div>
