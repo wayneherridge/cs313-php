@@ -21,7 +21,7 @@
 
 <main>
   <!-- Site title -->
-  <div class="jumbotron jumbotron-fluid">
+<div class="jumbotron jumbotron-fluid text-intro">
   <div class="container">
     <h1 class="display-5">Singer/Songwriter</h1>
     <p class="lead">I like music and when I have time I sometimes write my own songs</p>
