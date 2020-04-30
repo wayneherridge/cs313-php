@@ -33,6 +33,7 @@
     
     .jumbotron p {
         text-shadow: 2px 2px#17a2b8;
+        color: black;
     }
     
     #app {
