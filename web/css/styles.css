@@ -21,6 +21,10 @@
         display: inline-flex;
     }
     
+    .jumbotron {
+        color: #17a2b8;
+    }
+    
     #app {
         color: red;
         display: flex;
