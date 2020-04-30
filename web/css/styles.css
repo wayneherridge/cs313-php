@@ -31,6 +31,10 @@
         color: #17a2b8;
     }
     
+    .jumbotron h1 {
+        text-shadow: 2px 2px#17a2b8;
+    }
+    
     #app {
         color: red;
         display: flex;

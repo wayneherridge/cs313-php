@@ -24,7 +24,7 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-5 text-info">Singer/Songwriter</h1>
-    <p class="lead text-light">I like music and when I have time I sometimes write my own songs</p>
+    <p class="lead text-info ">I like music and when I have time I sometimes write my own songs</p>
   </div>
 </div>
 
