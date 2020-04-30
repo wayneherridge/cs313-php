@@ -1,6 +1,6 @@
-<nav class="navbar navbar-light bg-info">
+<nav class="navbar navbar-light bg-info mb-4">
   <a class="navbar-brand text-light" href="#">Wayne S. Herridge</a>
-  <button class="navbar-toggler toggler-example purple darken-3 collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
