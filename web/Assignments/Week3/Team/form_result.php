@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Teach03</title>
+    <title>Team Assignment - Week3</title>
 </head>
 <body>
 <p>
