@@ -1,33 +1,25 @@
-<?php 
-	$name = htmlspecialchars($_POST["name"]);
-	$email = htmlspecialchars($_POST["email"]);
-	$major = htmlspecialchars($_POST["major"]);
-	$places = $_POST["places"];
-	$comments = htmlspecialchars($_POST["comments"]);
-?>
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Form Results</title>
-	</head>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teach03</title>
+</head>
 <body>
-	<h3>Form Results</h3>
-
-	<p>Name: <?=$name ?></p>
-	<p>Email <a href="mailto:<?=$email ?>"><?=$email ?></a></p>
-	<p>major: <?=$major ?></p>
-	<p>destinations:</p>
-
-	<ul>
-		<?php
-		foreach ($places as $place) {
-		$place_clean = htmlspecialchars($place);
-		echo "<li><p>$place_clean</p></li>";
-		}
-		?>
-	</ul>
+<p>
+    Name: <?php echo $_POST["name"] ?><br>
+    Email: <a href=<?php echo "mailto:" .$_POST["email"] ?>><?php echo $_POST["email"] ?></a><br>
+    Major: <?php echo $_POST["major"] ?><br>
+    Comments:<br><?php echo $_POST["comments"] ?><br>
+    Visited Places:
+<ul>
+    <?php
+    $destinations = $_POST["visited"];
+    foreach ($destinations as $destination) {
+        $dest_clean = htmlspecialchars($destination);
+        echo "<li><p>$dest_clean</p></li>";
+    }
+    ?>
+</ul>
+</p>
 </body>
-
 </html>
