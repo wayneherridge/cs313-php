@@ -39,7 +39,7 @@ if(!empty($_SESSION["cart_item"])){
 <div id="product-grid">
 	
 	<div class="top_links">
-	<a href="shopping_cart.php" title="Cart">View Cart</a><br>
+	<a href="cart.php" title="Cart">View Cart</a><br>
 	Total Items = <?php echo $session_items; ?>
 	</div>
 	
