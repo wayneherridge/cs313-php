@@ -428,6 +428,7 @@ $v = "1.0";
 
 	<?php if($msg != "") { echo $msg; } ?>
 
+<!--
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -438,6 +439,6 @@ $v = "1.0";
 	ga('send', 'pageview');
 
 	</script>
-
+-->
   </body>
 </html>
