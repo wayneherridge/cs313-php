@@ -190,12 +190,12 @@ $v = "1.0";
 						</form>
 					</div>
 				</div>
-				<!-- Product 5 -->
+				<!-- Product 2 -->
 				<div class="col-xs-6 col-md-3">
 					<div class="thumbnail text-center">
-						<img src="https://placehold.it/150x150" class="img-responsive" alt="Product 4">
+						<img src="https://placehold.it/150x150" class="img-responsive" alt="Second Shoe">
 						<div class="caption text-center">
-							<h3>Product 5</h3>
+							<h3>Second Shoe</h3>
 							<span class="label label-warning">2.20 <?php echo $currency;?></span>
 						</div>
 						<form action="?" method="post">
@@ -203,17 +203,17 @@ $v = "1.0";
 							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
 							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
 							</div>
-							<input type="hidden" name="item" value="Product 5" />
+							<input type="hidden" name="item" value="Second Shoe" />
 							<input type="hidden" name="price" value="2.20" />
 						</form>
 					</div>
 				</div>
-				<!-- Product 6 -->
+				<!-- Product 3 -->
 				<div class="col-xs-6 col-md-3">
 					<div class="thumbnail text-center">
-						<img src="https://placehold.it/150x150" class="img-responsive" alt="Product 4">
+						<img src="https://placehold.it/150x150" class="img-responsive" alt="Piece of Paper">
 						<div class="caption text-center">
-							<h3>Product 6</h3>
+							<h3>Piece of Paper</h3>
 							<span class="label label-warning">2.30 <?php echo $currency;?></span>
 						</div>
 						<form action="?" method="post">
@@ -221,17 +221,17 @@ $v = "1.0";
 							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
 							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
 							</div>
-							<input type="hidden" name="item" value="Product 6" />
+							<input type="hidden" name="item" value="Piece of Paper" />
 							<input type="hidden" name="price" value="2.30" />
 						</form>
 					</div>
 				</div>
-				<!-- Product 7 -->
+				<!-- Product 4 -->
 				<div class="col-xs-6 col-md-3">
 					<div class="thumbnail text-center">
-						<img src="https://placehold.it/150x150" class="img-responsive" alt="Product 4">
+						<img src="https://placehold.it/150x150" class="img-responsive" alt="Used Eraser">
 						<div class="caption text-center">
-							<h3>Product 7</h3>
+							<h3>Used Eraser</h3>
 							<span class="label label-warning">2.40 <?php echo $currency;?></span>
 						</div>
 						<form action="?" method="post">
@@ -239,7 +239,7 @@ $v = "1.0";
 							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
 							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
 							</div>
-							<input type="hidden" name="item" value="Product 7" />
+							<input type="hidden" name="item" value="Used Eraser" />
 							<input type="hidden" name="price" value="2.40" />
 						</form>
 					</div>
@@ -275,7 +275,7 @@ $v = "1.0";
 						// List cart items
 						// We store order detail in HTML
 						$OrderDetail = '
-						<table border=1 cellpadding=5 cellspacing=5>
+						<table border=1 cellpadding=8 cellspacing=8>
 							<thead>
 								<tr>
 									<th>Product</th>
