@@ -25,7 +25,7 @@
       <div class="content assignments">
         <h1>My Assignments and Projects by Week</h1>
         <p>Week1 : <a href="https://still-dawn-71018.herokuapp.com/hello.html">Hello World</a></p>
-        <p>Week2 : <a href=""></a></p>
+        <p>Week2 Team : <a href="https://still-dawn-71018.herokuapp.com/week2team/index.html">Javascript</a></p>
         <p>Week3 Team : <a href="https://still-dawn-71018.herokuapp.com/week3team/index.php">PHP Forms</a></p></p>
       </div>
     </div>
