@@ -155,19 +155,19 @@ $v = "1.0";
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
           </p>
+
           <div class="col-sm-13">
 			<?php if(isset($_GET["pay"])) { ?>
 			<div class="panel panel-success">
 			  <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart"></span> Well done!</div>
 			  <div class="panel-body">
-				Payment options for <b><?php echo $_POST["payment"];?></b>, here you can code, or simply change the forms action to another script page.<br><br>
-				If you wish, you can write session variables into database (do not forget to clean the variables, for example you can use mysql_real_escape_string) or simply you can mail the form values. After  And then destroy & unset the session "cart".
+				Payment options for <b><?php echo $_POST["payment"];?>
 				<br><br>
 				<b>Order Details</b>
 				<br><br>
 				<?php echo $_POST["OrderDetail"];?>
 			  </div>
-			</div><!-- /.panel -->
+			</div>
 			<?php } ?>
 
 			<!-- Products List W/Thumbs -->
@@ -245,8 +245,6 @@ $v = "1.0";
 					</div>
 				</div>
 			</div>
-			<!-- // Products List W/Thumbs -->
-
           </div><!--/row-->
         </div><!--/span-->
 
@@ -382,7 +380,9 @@ $v = "1.0";
 						<div style="margin-top: 6px;">
 							<select class="form-control selectEleman" name="payment">
 							  <option value="Credit Card">Credit Card</option>
+							  <option value="Debit Card">Debit Card</option>
 							  <option value="PayPal">PayPal</option>
+
 							</select>
 						</div>
 					  </div>
@@ -428,17 +428,5 @@ $v = "1.0";
 
 	<?php if($msg != "") { echo $msg; } ?>
 
-<!--
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-928914-3', 'anbarli.org');
-	ga('send', 'pageview');
-
-	</script>
--->
   </body>
 </html>
