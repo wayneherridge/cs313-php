@@ -155,9 +155,6 @@ $v = "1.0";
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
           </p>
-          <div class="jumbotron">
-            <p>PHP Session Based Cart System is pretty simple and fast way for listing small amount of products. This script lists manually added products, you can add that products to your shopping cart, remove them, change quantity via sessions. This script doesn't include any payment method or payment page.</p>
-          </div><!-- /.jumbotron -->
           <div class="col-sm-13">
 			<?php if(isset($_GET["pay"])) { ?>
 			<div class="panel panel-success">
