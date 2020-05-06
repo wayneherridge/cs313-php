@@ -1,115 +1,65 @@
 <?php
-session_start ();
-
-$items = array (
-        'A123' => array (
-                'name' => 'Item1',
-                'desc' => 'Item 1 description...',
-                'price' => 1000 
-        ),
-        'B456' => array (
-                'name' => 'Item40',
-                'desc' => 'Item40 description...',
-                'price' => 2500 
-        ),
-        'Z999' => array (
-                'name' => 'Item999',
-                'desc' => 'Item999 description...',
-                'price' => 9999 
-        ) 
-);
-
-if (! isset ( $_SESSION ['cart'] )) {
-    $_SESSION ['cart'] = array ();
-}
-
-// Add
-if (isset ( $_POST ["buy"] )) {
-    // Check the item is not already in the cart
-    if (!in_array($_POST ["buy"], $_SESSION['cart'])) {
-        // Add new item to cart
-        $_SESSION ['cart'][] = $_POST["buy"];
-    }
-} 
-
-// Delete Item
-else if (isset ( $_POST ['delete'] )) { // a remove button has been clicked
-    // Remove the item from the cart
-    if (false !== $key = array_search($_POST['delete'], $_SESSION['cart'])) {
-        unset($_SESSION['cart'][$key]);
-    }
-} 
-
-// Empty Cart
-else if (isset ( $_POST ["delete"] )) { // remove item from cart
-    unset ( $_SESSION ['cart'] );
-}
-
+	session_start();
+	require_once("dbcontroller.php");
+	
+	// Database Configuration and Connection
+	$db_handle = new DBController();
+	
+	// To Add Product to Cart
+	if(!empty($_GET["action"]) && $_GET["action"] == "add") {
+		if(!empty($_POST["quantity"])) {
+			$productByCode = $db_handle->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
+			$itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"]));
+			
+			if(!empty($_SESSION["cart_item"])) {
+				if(in_array($productByCode[0]["code"],$_SESSION["cart_item"])) {
+					foreach($_SESSION["cart_item"] as $k => $v) {
+							if($productByCode[0]["code"] == $k)
+								$_SESSION["cart_item"][$k]["quantity"] = $_POST["quantity"];
+					}
+				} else {
+					$_SESSION["cart_item"] = array_merge($_SESSION["cart_item"],$itemArray);
+				}
+			} else {
+				$_SESSION["cart_item"] = $itemArray;
+			}
+		} // End if !empty(quantity)
+	}
 ?>
-<form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
-    <?php
-        foreach ( $items as $ino => $item ) {
-            $title = $item ['name'];
-            $desc = $item ['desc'];
-            $price = $item ['price'];
-
-            echo " <p>$title</p>";
-            echo " <p>$desc</p>";
-            echo "<p>\$$price</p>";
-
-            if ($_SESSION ['cart'] == $ino) {
-                echo '<img src="carticon.png">';
-                echo "<p><button type='submit' name='delete' value='$ino'>Remove</button></p>";
-            } else {
-                echo "<button type='submit' name='buy' value='$ino'>Buy</button> ";
-            }
-        }
-    ?>
-</form>
-
+...
+<link href="style.css" type="text/css" rel="stylesheet" />
+</HEAD>
+<BODY>
 <?php
-if (isset ( $_SESSION ["cart"] )) {
-    ?>
-
-<form action='(omitted link)'
-target='_blank' method='post'
-enctype='application/x-www-form-urlencoded'>
-<table>
-    <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Action</th>
-    </tr>
-    <?php
-// Set a default total
-$total = 0;
-foreach ( $_SESSION['cart'] as $ino ) {
-    ?>
-<tr>
-    <td>
-        Name: <?php echo $items[$ino]['name']; ?>
-    </td>
-    <td>
-        Price: <?php echo $items[$ino]["price"]; ?>
-    </td>
-    <td>
-        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button>
-    </td>
-</tr>
-<?php
-    $total += $items[$ino]['price'];
-} // end foreach
+$session_items = 0;
+if(!empty($_SESSION["cart_item"])){
+	$session_items = count($_SESSION["cart_item"]);
+}	
 ?>
-
-Total: $<?php echo $total; ?>
-    ?>
-    <tr>
-        <td colspan="2">Total: $<?php echo($total); ?></td>
-        <td><input type='submit' value='Checkout' /></td>
-    </tr>
-    <tr>
-        <td><button type='submit' name='clear'>Clear cart</button></td>
-    </tr>
-</table>
-</form>
-<?php  } ?>
+<div id="product-grid">
+	
+	<div class="top_links">
+	<a href="shopping_cart.php" title="Cart">View Cart</a><br>
+	Total Items = <?php echo $session_items; ?>
+	</div>
+	
+	<div class="txt-heading">Products</div>
+	<?php
+	$product_array = $db_handle->runQuery("SELECT * FROM tblproduct ORDER BY id ASC");
+	if (!empty($product_array)) { 
+		foreach($product_array as $key=>$value){
+	?>
+		<div class="product-item">
+			<form method="post" action="index.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+			<div class="product-image"><img src="<?php echo $product_array[$key]["image"]; ?>"></div>
+			<div><strong><?php echo $product_array[$key]["name"]; ?></strong></div>
+			<div class="product-price"><?php echo "$".$product_array[$key]["price"]; ?></div>
+			<div><input type="text" name="quantity" value="1" size="2" /><input type="submit" value="Add to cart" class="btnAddAction" /></div>
+			</form>
+		</div>
+	
+	<?php
+		}
+	}
+	?>
+</div>
