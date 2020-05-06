@@ -16,28 +16,13 @@ $v = "1.6.2";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PHP Session Based Cart System is pretty simple and fast way for listing small amount of products. This script doesn't include any payment method or payment page. This script lists manually added products, you can add that products to your shopping cart, remove them, change quantity via sessions.">
-    <meta name="author" content="anbarli.org">
+    <meta name="description" content="PHP Shopping Cart">
+    <meta name="author" content="Wayne Herridge">
 
-    <title>PHP-SBCS / Session Based Cart System</title>
+    <title>PHP Shopping Cart</title>
 
-    <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<script language="Javascript">
-	<!-- Allows only numeric chars -->
-	function isNumberKey(evt)
-	{
-		var charCode=(evt.which)?evt.which:event.keyCode
-		if(charCode>31&&(charCode<48||charCode>57))
-		return false;return true;
-	}
-	</script>
-
-	<style>
-	.quantity { width: 20px; float: left; margin-right: 10px; height: 23px; font-size: 12px; padding: 5px; }
-	</style>
-
+	<link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -48,36 +33,36 @@ $v = "1.6.2";
 	{ } else {
 
 		# Take values
-		$SBCSprice = $_POST['price'];
-		$SBCSitem = $_POST['item'];
-		$SBCSquantity = $_POST['quantity'];
-		$SBCSuniquid = rand();
-		$SBCSexist = false;
-		$SBCScount = 0;
+		$price = $_POST['price'];
+		$item = $_POST['item'];
+		$quantity = $_POST['quantity'];
+		$uniquid = rand();
+		$exist = false;
+		$count = 0;
 		// If SESSION Generated?
-		if($_SESSION['SBCScart']!="")
+		if($_SESSION['cart']!="")
 		{
 			// Look for item
-			foreach($_SESSION['SBCScart'] as $SBCSproduct)
+			foreach($_SESSION['cart'] as $product)
 			{
 				// Yes we found it
-				if($SBCSitem == $SBCSproduct['item']) {
-					$SBCSexist = true;
+				if($item == $product['item']) {
+					$exist = true;
 					break;
 				}
-				$SBCScount++;
+				$count++;
 			}
 		}
 		// If we found same item
-		if($SBCSexist)
+		if($exist)
 		{
 			// Update quantity
-			$_SESSION['SBCScart'][$SBCScount]['quantity'] += $SBCSquantity;
+			$_SESSION['cart'][$count]['quantity'] += $quantity;
 			// Write down the message and then we open in modal at the bottom
 			$msg = "
 			<script type=\"text/javascript\">
 				$(document).ready(function(){
-					$('#myDialogText').text('".$SBCSitem." quantity updated..');
+					$('#myDialogText').text('".$item." quantity updated..');
 					$('#modal-cart').modal('show');
 				});
 			</script>
@@ -86,25 +71,25 @@ $v = "1.6.2";
 		} else {
 
 			// If we do not found, insert new
-			$SBCSmycartrow = array(
-				'item' => $SBCSitem,
-				'unitprice' => $SBCSprice,
-				'quantity' => $SBCSquantity,
-				'id' => $SBCSuniquid
+			$mycartrow = array(
+				'item' => $item,
+				'unitprice' => $price,
+				'quantity' => $quantity,
+				'id' => $uniquid
 			);
 
 			// If session not exist, create
-			if (!isset($_SESSION['SBCScart']))
-				$_SESSION['SBCScart'] = array();
+			if (!isset($_SESSION['cart']))
+				$_SESSION['cart'] = array();
 
 			// Add item to cart
-			$_SESSION['SBCScart'][] = $SBCSmycartrow;
+			$_SESSION['cart'][] = $mycartrow;
 
 			// Write down the message and then we open in modal at the bottom
 			$msg = "
 			<script type=\"text/javascript\">
 				$(document).ready(function(){
-					$('#myDialogText').text('".$SBCSitem." added to your cart');
+					$('#myDialogText').text('".$item." added to your cart');
 					$('#modal-cart').modal('show');
 				});
 			</script>
@@ -137,34 +122,12 @@ $v = "1.6.2";
 	}
 	?>
 
-    <div class="navbar navbar-inverse" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">PHP-SBCS</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-			<li class="active"><a href="/" target="blank">Who Am I</a></li>
-			<li class="active"><a href="https://github.com/ganbarli/PHP-SBCS" target="blank">GitHub Project Page</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </div><!-- /.navbar -->
-
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-8">
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
           </p>
-          <div class="jumbotron">
-            <p>PHP Session Based Cart System is pretty simple and fast way for listing small amount of products. This script lists manually added products, you can add that products to your shopping cart, remove them, change quantity via sessions. This script doesn't include any payment method or payment page.</p>
-          </div><!-- /.jumbotron -->
           <div class="col-sm-13">
 			<?php if(isset($_GET["pay"])) { ?>
 			<div class="panel panel-success">
