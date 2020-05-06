@@ -23,6 +23,7 @@ $v = "1.6.2";
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
   </head>
 
   <body>
