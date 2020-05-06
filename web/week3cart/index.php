@@ -406,7 +406,7 @@ $v = "1.0";
       <hr>
 
       <footer>
-        <p><a href="https://github.com/ganbarli/PHP-" target="blank">PHP-</a> (<?php echo $v; ?>) is coded with <i class="glyphicon glyphicon-heart"></i> in İstanbul, <a href="http://www.turkeydiscoverthepotential.com/" target="blank">Türkiye</a></p>
+			<p>&copy; <?php echo date("Y"); ?></p>
       </footer>
 
     </div><!--/.container-->
