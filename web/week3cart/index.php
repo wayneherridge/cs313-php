@@ -176,43 +176,6 @@ $v = "1.0";
 			  </div>
 			</div><!-- /.panel -->
 			<?php } ?>
-			<!-- Products Group -->
-			<div class="panel panel-default">
-			  <div class="panel-heading"><span class="glyphicon  glyphicon-cutlery"></span> Products Group</div>
-			  <ul class="list-group">
-				<!-- Product 1 -->
-				<li class="list-group-item">
-					<form action="?" method="post">
-						<input type="submit" name="ok" value="+" class="btn btn-success btn-xs">
-						<input class="form-control quantity" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1"> Product 1
-						<span class="pull-right">1.10 <?php echo $currency;?></span>
-						<input type="hidden" name="item" value="Product 1" />
-						<input type="hidden" name="price" value="1.10" />
-					</form>
-				</li>
-				<!-- Product 2 -->
-				<li class="list-group-item">
-					<form action="?" method="post">
-						<input type="submit" name="ok" value="+" class="btn btn-success btn-xs">
-						<input class="form-control quantity" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1"> Product 2
-						<span class="pull-right">1.20 <?php echo $currency;?></span>
-						<input type="hidden" name="item" value="Product 2" />
-						<input type="hidden" name="price" value="1.20" />
-					</form>
-				</li>
-				<!-- Product 3 -->
-				<li class="list-group-item">
-					<form action="?" method="post">
-						<input type="submit" name="ok" value="+" class="btn btn-success btn-xs">
-						<input class="form-control quantity" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1"> Product 3
-						<span class="pull-right">1.30 <?php echo $currency;?></span>
-						<input type="hidden" name="item" value="Product 3" />
-						<input type="hidden" name="price" value="1.30" />
-					</form>
-				</li>
-			  </ul>
-			</div>
-			<!-- // Products Group -->
 
 			<!-- Products List W/Thumbs -->
 			<div class="row">
