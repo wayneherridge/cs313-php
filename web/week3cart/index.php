@@ -81,24 +81,27 @@ enctype='application/x-www-form-urlencoded'>
         <th>Action</th>
     </tr>
     <?php
+// Set a default total
+$total = 0;
+foreach ( $_SESSION['cart'] as $ino ) {
+    ?>
+<tr>
+    <td>
+        Name: <?php echo $items[$ino]['name']; ?>
+    </td>
+    <td>
+        Price: <?php echo $items[$ino]["price"]; ?>
+    </td>
+    <td>
+        <button type='submit' name='delete' value='<?php echo $ino; ?>'>Remove</button>
+    </td>
+</tr>
+<?php
+    $total += $items[$ino]['price'];
+} // end foreach
+?>
 
-    $total = 0;
-    foreach ( $_SESSION ["cart"] as $i ) {
-        ?>
-    <tr>
-        <td>
-            <?php echo($_SESSION["cart"]); ?> <!--Item name-->
-        </td>
-        <td>price<?php echo($_SESSION["price"][$i] ); ?>
-            <!--Item cost-->
-        </td>
-        <td><button type='submit' name='delete' value='$ino'>Remove</button>
-            </p></td>
-    </tr>
-    <?php
-        $total = + $_SESSION ["amounts"] [$i];
-    }
-    $_SESSION ["total"] = $total;
+Total: $<?php echo $total; ?>
     ?>
     <tr>
         <td colspan="2">Total: $<?php echo($total); ?></td>
