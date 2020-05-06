@@ -23,7 +23,6 @@ $v = "1.6.2";
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="js/script.js"></script>
   </head>
 
   <body>
@@ -449,6 +448,8 @@ $v = "1.6.2";
 	ga('send', 'pageview');
 
 	</script>
+
+<script src="js/script.js"></script>
 
   </body>
 </html>
