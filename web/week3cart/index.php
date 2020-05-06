@@ -172,12 +172,12 @@ $v = "1.0";
 
 			<!-- Products List W/Thumbs -->
 			<div class="row">
-				<!-- Product 4 -->
+				<!-- Product 1 -->
 				<div class="col-xs-6 col-md-3">
 					<div class="thumbnail text-center">
-						<img src="https://placehold.it/150x150" class="img-responsive" alt="Product 4">
+						<img src="https://placehold.it/150x150" class="img-responsive" alt="One Shoe">
 						<div class="caption text-center">
-							<h3>Product 4</h3>
+							<h3>One Shoe</h3>
 							<span class="label label-warning">2.10 <?php echo $currency;?></span>
 						</div>
 						<form action="?" method="post">
@@ -185,7 +185,7 @@ $v = "1.0";
 							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
 							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
 							</div>
-							<input type="hidden" name="item" value="Product 4" />
+							<input type="hidden" name="item" value="One Shoe" />
 							<input type="hidden" name="price" value="2.10" />
 						</form>
 					</div>
