@@ -1,19 +1,30 @@
-<?php session_start(); ?>
-
-<!DOCTYPE html>
-<html lang="en">
+<?Php
+session_start();
+?>
+<!doctype html public "-//w3c//dtd html 3.2//en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
+<title>Demo of Session array used for cart from plus2net.com</title>
 </head>
 <body>
-    <?php
-        $_SESSION['cart']=array();
-        array_push($_SESSION['cart'],'apple','mango','banana');
 
-        echo "No. of items in the cart = ".sizeof($_SESSION['cart'])." <a href=empty-cart.php>Empty Cart</a><br>";
-        
-    ?>
+<?Php
+//$_SESSION['cart']=array(); // Declaring session array
+
+$_SESSION['cart']=array(array("product"=>"apple","quantity"=>2),
+array("product"=>"Orange","quantity"=>4),
+array("product"=>"Banana","quantity"=>5),
+array("product"=>"Mango","quantity"=>7),
+); 
+//$_SESSION['cart'][]=$a;
+
+//array_push($_SESSION['cart'],$a); // Items added to cart
+
+
+echo "Number of Items in the cart = ".sizeof($_SESSION['cart']);
+require 'menu.php';
+?>
+
 </body>
+
 </html>
