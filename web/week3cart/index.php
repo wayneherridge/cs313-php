@@ -9,20 +9,32 @@ session_start();
 $currency = "$";
 
 $msg = "";
-$v = "1.6.2";
+$v = "1.0";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PHP Shopping Cart">
+    <meta name="description" content="Week 3 PHP Shopping Cart">
     <meta name="author" content="Wayne Herridge">
 
     <title>PHP Shopping Cart</title>
 
+    <!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<script language="Javascript">
+	<!-- Allows only numeric chars -->
+	function isNumberKey(evt)
+	{
+		var charCode=(evt.which)?evt.which:event.keyCode
+		if(charCode>31&&(charCode<48||charCode>57))
+		return false;return true;
+	}
+	</script>
+
   </head>
 
   <body>
@@ -118,9 +130,28 @@ $v = "1.6.2";
 	$remove = isset($_GET['remove']) ? $_GET['remove'] : '';
 	if($remove!="")
 	{
-		$_SESSION['SBCScart'][$_GET["remove"]]['quantity'] = 0;
+		$_SESSION['cart'][$_GET["remove"]]['quantity'] = 0;
 	}
 	?>
+
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.php">PHP-</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+			<li class="active"><a href="/" target="blank">Who Am I</a></li>
+			<li class="active"><a href="https://github.com/ganbarli/PHP-" target="blank">GitHub Project Page</a></li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </div><!-- /.navbar -->
 
     <div class="container">
       <div class="row">
@@ -128,13 +159,16 @@ $v = "1.6.2";
           <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
           </p>
+          <div class="jumbotron">
+            <p>PHP Session Based Cart System is pretty simple and fast way for listing small amount of products. This script lists manually added products, you can add that products to your shopping cart, remove them, change quantity via sessions. This script doesn't include any payment method or payment page.</p>
+          </div><!-- /.jumbotron -->
           <div class="col-sm-13">
 			<?php if(isset($_GET["pay"])) { ?>
 			<div class="panel panel-success">
 			  <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart"></span> Well done!</div>
 			  <div class="panel-body">
 				Payment options for <b><?php echo $_POST["payment"];?></b>, here you can code, or simply change the forms action to another script page.<br><br>
-				If you wish, you can write session variables into database (do not forget to clean the variables, for example you can use mysql_real_escape_string) or simply you can mail the form values. After  And then destroy & unset the session "SBCScart".
+				If you wish, you can write session variables into database (do not forget to clean the variables, for example you can use mysql_real_escape_string) or simply you can mail the form values. After  And then destroy & unset the session "cart".
 				<br><br>
 				<b>Order Details</b>
 				<br><br>
@@ -264,7 +298,7 @@ $v = "1.6.2";
           <div class="sidebar-nav">
 			<?php
 			// If cart is empty
-			if (!isset($_SESSION['SBCScart']) || (count($_SESSION['SBCScart']) == 0)) {
+			if (!isset($_SESSION['cart']) || (count($_SESSION['cart']) == 0)) {
 			?>
 				<div class="panel panel-default">
 				  <div class="panel-heading">
@@ -305,14 +339,14 @@ $v = "1.6.2";
 						$linenumber = 0;
 
 						// Run loop for cart array
-						foreach($_SESSION['SBCScart'] as $SBCSitem)
+						foreach($_SESSION['cart'] as $item)
 						{
 							// Don't list items with 0 qty
-							if($SBCSitem['quantity']!=0) {
+							if($item['quantity']!=0) {
 
 							// For calculating total values with decimals
-							$pricedecimal = str_replace(",",".",$SBCSitem['unitprice']);
-							$qtydecimal = str_replace(",",".",$SBCSitem['quantity']);
+							$pricedecimal = str_replace(",",".",$item['unitprice']);
+							$qtydecimal = str_replace(",",".",$item['quantity']);
 
 							$pricedecimal = (float)$pricedecimal;
 							$qtydecimal = (float)$qtydecimal;
@@ -321,15 +355,15 @@ $v = "1.6.2";
 							$totaldecimal = $pricedecimal*$qtydecimal;
 
 							// We store order detail in HTML
-							$OrderDetail .= "<tr><td>".$SBCSitem['item']."</td><td>".$SBCSitem['unitprice']." ".$currency."</td><td>".$SBCSitem['quantity']."</td><td>".$totaldecimal." ".$currency."</td></tr>";
+							$OrderDetail .= "<tr><td>".$item['item']."</td><td>".$item['unitprice']." ".$currency."</td><td>".$item['quantity']."</td><td>".$totaldecimal." ".$currency."</td></tr>";
 
 							// Write cart to screen
 							echo
 							"
 							<tr class='tablerow'>
-								<td><a href=\"?remove=".$linenumber."\" class=\"btn btn-danger btn-xs\" onclick=\"return confirm('Are you sure?')\">X</a> ".$SBCSitem['item']."</td>
-								<td>".$SBCSitem['unitprice']." ".$currency."</td>
-								<td>".$SBCSitem['quantity']."</td>
+								<td><a href=\"?remove=".$linenumber."\" class=\"btn btn-danger btn-xs\" onclick=\"return confirm('Are you sure?')\">X</a> ".$item['item']."</td>
+								<td>".$item['unitprice']." ".$currency."</td>
+								<td>".$item['quantity']."</td>
 								<td>".$totaldecimal." ".$currency."</td>
 							</tr>
 							";
@@ -416,7 +450,7 @@ $v = "1.6.2";
       <hr>
 
       <footer>
-        <p><a href="https://github.com/ganbarli/PHP-SBCS" target="blank">PHP-SBCS</a> (<?php echo $v; ?>) is coded with <i class="glyphicon glyphicon-heart"></i> in İstanbul, <a href="http://www.turkeydiscoverthepotential.com/" target="blank">Türkiye</a></p>
+        <p><a href="https://github.com/ganbarli/PHP-" target="blank">PHP-</a> (<?php echo $v; ?>) is coded with <i class="glyphicon glyphicon-heart"></i> in İstanbul, <a href="http://www.turkeydiscoverthepotential.com/" target="blank">Türkiye</a></p>
       </footer>
 
     </div><!--/.container-->
@@ -448,8 +482,6 @@ $v = "1.6.2";
 	ga('send', 'pageview');
 
 	</script>
-
-<script src="js/script.js"></script>
 
   </body>
 </html>
