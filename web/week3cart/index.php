@@ -335,6 +335,7 @@ $v = "1.0";
 						?>
 						<tr class='tableactive'>
 							<td><a href='?clear' class='btn btn-danger btn-xs' onclick="return confirm('Are you sure?')">Empty Cart</a></td>
+							<td><a href='#' class='btn btn-danger btn-xs' onclick="return confirm('Are you sure?')">View Cart</a></td>
 							<td class='text-right'>Total</td>
 							<td><?php echo $qtydecimaltotal;?></td>
 							<td><?php echo $total;?> <?php echo $currency;?></td>
@@ -397,8 +398,6 @@ $v = "1.0";
 					</form>
 				  </div>
 				</div>
-				<!-- // Address -->
-
 			<?php } # End Cart Listing ?>
           </div><!--/.well -->
         </div><!--/span-->
