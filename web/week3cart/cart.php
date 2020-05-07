@@ -1,41 +1,58 @@
 <?php
-    session_start();
-    $_SESSION['cart'];
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
 
-<div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
-          </p>
+class Cart
+{
+    /**
+     * @var CartItem[]
+     */
+    private array $items = [];
 
-          <div class="col-sm-13">
-			<?php if(isset($_GET["pay"])) { ?>
-			<div class="panel panel-success">
-			  <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart"></span> Well done!</div>
-			  <div class="panel-body">
-				Payment options for <b><?php echo $_POST["payment"];?>
-				<br><br>
-				<b>Order Details</b>
-				<br><br>
-				<?php echo $_POST["OrderDetail"];?>
-			  </div>
-			</div>
-			<?php } ?>
-        </div><!--/.well -->
-    </div><!--/span-->
-</div><!--/row-->            
+    // TODO Generate getters and setters of properties
 
-</body>
-</html>
+    /**
+     * Add Product $product into cart. If product already exists inside cart
+     * it must update quantity.
+     * This must create CartItem and return CartItem from method
+     * Bonus: $quantity must not become more than whatever
+     * is $availableQuantity of the Product
+     *
+     * @param Product $product
+     * @param int $quantity
+     * @return CartItem
+     */
+    public function addProduct(Product $product, int $quantity): CartItem
+    {
+        //TODO Implement method
+    }
+
+    /**
+     * Remove product from cart
+     *
+     * @param Product $product
+     */
+    public function removeProduct(Product $product)
+    {
+        //TODO Implement method
+    }
+
+    /**
+     * This returns total number of products added in cart
+     *
+     * @return int
+     */
+    public function getTotalQuantity(): int
+    {
+        //TODO Implement method
+    }
+
+    /**
+     * This returns total price of products added in cart
+     *
+     * @return float
+     */
+    public function getTotalSum(): float
+    {
+        //TODO Implement method
+    }
+}
