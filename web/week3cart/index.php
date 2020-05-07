@@ -82,7 +82,7 @@ $v = "1.0";
 
 		} else {
 
-			// If we do not found, insert new
+			// If item not found, insert new item
 			$mycartrow = array(
 				'item' => $item,
 				'unitprice' => $price,
@@ -90,7 +90,7 @@ $v = "1.0";
 				'id' => $uniquid
 			);
 
-			// If session not exist, create
+			// If session does not exist, create one
 			if (!isset($_SESSION['cart']))
 				$_SESSION['cart'] = array();
 
@@ -115,7 +115,6 @@ $v = "1.0";
 	{
 		session_unset();
 		session_destroy();
-		// Write down the message and then we open in modal at the bottom
 		$msg = "
 		<script type=\"text/javascript\">
 			$(document).ready(function(){
@@ -335,7 +334,7 @@ $v = "1.0";
 						?>
 						<tr class='tableactive'>
 							<td><a href='?clear' class='btn btn-danger btn-xs' onclick="return confirm('Are you sure?')">Empty Cart</a></td>
-							<td><a href='#' class='btn btn-danger btn-xs' onclick="return confirm('Are you sure?')">View Cart</a></td>
+							<td><a href='?cart' class='btn btn-danger btn-xs' onclick="return confirm('Are you sure?')">View Cart</a></td>
 							<td class='text-right'>Total</td>
 							<td><?php echo $qtydecimaltotal;?></td>
 							<td><?php echo $total;?> <?php echo $currency;?></td>
