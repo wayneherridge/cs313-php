@@ -388,7 +388,8 @@ $v = "1.0";
 					  </div>
 					  <div class="form-group">
 						<div>
-						  <button type="submit" class="btn btn-success pull-right">Give Order</button>
+						  <button type="submit" class="btn btn-success pull-right">Send Order</button>
+						  <button type="submit" class="btn btn-success pull-right">Continue Shopping</button>
 						</div>
 					  </div>
 					<input type="hidden" name="total" value="<?php echo $total;?>">
@@ -406,7 +407,7 @@ $v = "1.0";
       <hr>
 
       <footer>
-			<p>&copy; <?php echo date("Y"); ?></p>
+			<p>&copy; <?php echo date("Y"); ?> Wayne Herridge</p>
       </footer>
 
     </div><!--/.container-->
