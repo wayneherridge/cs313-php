@@ -22,16 +22,13 @@
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
       <h5 class="my-0 mr-md-auto font-weight-normal">PHP Shopping Cart</h5>
       <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Features</a>
-        <a class="p-2 text-dark" href="#">Enterprise</a>
-        <a class="p-2 text-dark" href="#">Support</a>
-        <a class="p-2 text-dark" href="#">Pricing</a>
+        <a class="p-2 text-dark" href="store.php">Browse Items</a>
+        <a class="p-2 text-dark" href="cart.php">View Cart</a>
       </nav>
-      <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Store</h1>
+      <h1 class="display-4">My PHP Store</h1>
       <p class="lead">Choose what you would like to purchase</p>
     </div>
 
@@ -49,22 +46,19 @@
               <li>Email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Add to Cart</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal">Pro</h4>
+            <h4 class="my-0 font-weight-normal"></h4>
           </div>
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
