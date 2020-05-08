@@ -29,11 +29,8 @@
 
     <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
       <h1 class="display-4">Purchase Confirmation</h1>
+      <h3>Thank you for your purchase</h3>
     </div>
-
-
-<!-- Put code here -->
-
     
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">

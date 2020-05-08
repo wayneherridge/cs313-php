@@ -24,100 +24,6 @@
 
   <body>
 
-<?php
-  // Add item to cart
-	if (empty($_POST['item']) || empty($_POST['price']) || empty($_POST['quantity']))
-	{ } else {
-
-		# Take values
-		$price = $_POST['price'];
-		$item = $_POST['item'];
-		$quantity = $_POST['quantity'];
-		$uniquid = rand();
-		$exist = false;
-		$count = 0;
-		// If SESSION Generated?
-		if($_SESSION['cart']!="")
-		{
-			// Look for item
-			foreach($_SESSION['cart'] as $product)
-			{
-				// Yes we found it
-				if($item == $product['item']) {
-					$exist = true;
-					break;
-				}
-				$count++;
-			}
-		}
-		// If we found same item
-		if($exist)
-		{
-			// Update quantity
-			$_SESSION['cart'][$count]['quantity'] += $quantity;
-			// Write down the message and then we open in modal at the bottom
-			$msg = "
-			<script type=\"text/javascript\">
-				$(document).ready(function(){
-					$('#myDialogText').text('".$item." quantity updated..');
-					$('#modal-cart').modal('show');
-				});
-			</script>
-			";
-
-		} else {
-
-			// If item not found, insert new item
-			$mycartrow = array(
-				'item' => $item,
-				'unitprice' => $price,
-				'quantity' => $quantity,
-				'id' => $uniquid
-			);
-
-			// If session does not exist, create one
-			if (!isset($_SESSION['cart']))
-				$_SESSION['cart'] = array();
-
-			// Add item to cart
-			$_SESSION['cart'][] = $mycartrow;
-
-			// Write down the message and then we open in modal at the bottom
-			$msg = "
-			<script type=\"text/javascript\">
-				$(document).ready(function(){
-					$('#myDialogText').text('".$item." added to your cart');
-					$('#modal-cart').modal('show');
-				});
-			</script>
-			";
-
-		}
-	}
-
-	// Clear cart
-	if(isset($_GET["clear"]))
-	{
-		session_unset();
-		session_destroy();
-		$msg = "
-		<script type=\"text/javascript\">
-			$(document).ready(function(){
-				$('#myDialogText').text('Your cart is empty now..');
-				$('#modal-cart').modal('show');
-			});
-		</script>
-		";
-	}
-
-	// Remove item from cart (Updating quantity to 0)
-	$remove = isset($_GET['remove']) ? $_GET['remove'] : '';
-	if($remove!="")
-	{
-		$_SESSION['cart'][$_GET["remove"]]['quantity'] = 0;
-	}
-	?>
-
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
       <h5 class="my-0 mr-md-auto font-weight-normal">PHP Shopping Cart</h5>
       <nav class="my-2 my-md-0 mr-md-3">
@@ -134,23 +40,6 @@
 
 <div class="container">
 <div class="row">
-    <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
-          </p>
-
-          <div class="col-sm-13">
-			<?php if(isset($_GET["pay"])) { ?>
-			<div class="panel panel-success">
-			  <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart"></span> Well done!</div>
-			  <div class="panel-body">
-				Payment options for <b><?php echo $_POST["payment"];?>
-				<br><br>
-				<b>Order Details</b>
-				<br><br>
-				<?php echo $_POST["OrderDetail"];?>
-			  </div>
-			</div>
-			<?php } ?>
 
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
