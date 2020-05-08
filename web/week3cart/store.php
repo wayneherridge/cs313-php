@@ -41,20 +41,21 @@
           <div class="card-body">
             <h1 class="card-title pricing-card-title">$20</h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>Size : UK 6</li>
-              <li>Color: Red</li>
+              <li>Size  : UK 6</li>
+              <li>Color : Red</li>
             </ul>
             <button type="button" class="btn btn-lg btn-block btn-outline-primary">Add to Cart</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h4 class="my-0 font-weight-normal"></h4>
+            <h4 class="my-0 font-weight-normal">iPhone 20</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <h1 class="card-title pricing-card-title">$5000</h1>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
+              <li>Cameras : 20</li>
+              <li>Zoom    : 30x</li>
             </ul>
             <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
           </div>
