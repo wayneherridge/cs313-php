@@ -41,7 +41,7 @@
 
 
 
-    <button class="btn btn-primary btn-sm" type="submit">Confirm Payment</button>
+    <a class="btn btn-primary btn-sm" href="confirmation.php" role="button">Confirm Payment</a>
     <a class="btn btn-primary btn-sm" href="store.php" role="button">Continue Shopping</a>
     <button class="btn btn-primary btn-sm" type="submit">Cancel Purchase</button>
 
