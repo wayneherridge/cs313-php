@@ -63,12 +63,19 @@
             <h4 class="my-0 font-weight-normal">Red Shoes</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">20<?php echo $currency;?></h1>
+            <h1 class="card-title pricing-card-title"><?php echo $currency;?>20</h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Size  : UK 6</li>
               <li>Color : Red</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
+            <form action="?" method="post">
+							<div class = "input-group">
+							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
+							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
+							</div>
+							<input type="hidden" name="item" value="One Shoe" />
+							<input type="hidden" name="price" value="2.10" />
+						</form>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -76,7 +83,7 @@
             <h4 class="my-0 font-weight-normal">iPhone 20</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">5000<?php echo $currency;?></h1>
+            <h1 class="card-title pricing-card-title"><?php echo $currency;?>5000</h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Cameras : 20</li>
               <li>Zoom    : 30x</li>
@@ -89,7 +96,7 @@
             <h4 class="my-0 font-weight-normal">VE Day Coin</h4>
           </div>
           <div class="card-body">
-            <h1 class="card-title pricing-card-title">100<?php echo $currency;?></h1>
+            <h1 class="card-title pricing-card-title"><?php echo $currency;?>100</h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>Size  : British 50 pence</li>
               <li>Value : $100</li>
