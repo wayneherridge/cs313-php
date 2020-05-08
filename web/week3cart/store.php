@@ -133,7 +133,7 @@
 
 
 <div class="container">
-
+<div class="row">
     <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
           </p>
@@ -238,6 +238,7 @@
         text: 'Thumbnail'
       });
     </script>
+</div>
 </div>
   </body>
 </html>
