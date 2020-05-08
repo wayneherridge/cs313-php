@@ -42,8 +42,7 @@
 
 
     <button class="btn btn-primary btn-sm" type="submit">Confirm Payment</button>
-    <button class="btn btn-primary btn-sm" type="submit">Continue Shopping</button>
-    <a class="btn btn-primary" href="store.php" role="button">Continue Shopping</a>
+    <a class="btn btn-primary btn-sm" href="store.php" role="button">Continue Shopping</a>
     <button class="btn btn-primary btn-sm" type="submit">Cancel Purchase</button>
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
