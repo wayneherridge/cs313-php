@@ -18,7 +18,6 @@
     <link href="css/pricing.css" rel="stylesheet">
 
   </head>
-
   <body>
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
@@ -33,8 +32,6 @@
       <h1 class="display-4">Checkout</h1>
     </div>
 
-
-<!-- Put code here -->
 <div class="container">
 <div class="row">
         <div class="col-md-4 order-md-2 mb-4">

@@ -33,6 +33,25 @@
     </div>
 
     <div class="container">
+
+    <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
+          </p>
+
+          <div class="col-sm-13">
+			<?php if(isset($_GET["pay"])) { ?>
+			<div class="panel panel-success">
+			  <div class="panel-heading"><span class="glyphicon glyphicon-shopping-cart"></span> Well done!</div>
+			  <div class="panel-body">
+				Payment options for <b><?php echo $_POST["payment"];?>
+				<br><br>
+				<b>Order Details</b>
+				<br><br>
+				<?php echo $_POST["OrderDetail"];?>
+			  </div>
+			</div>
+			<?php } ?>
+
       <div class="card-deck mb-3 text-center">
         <div class="card mb-4 box-shadow">
           <div class="card-header">
