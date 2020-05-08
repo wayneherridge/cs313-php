@@ -131,7 +131,8 @@
       <p class="lead">Choose what you would like to purchase</p>
     </div>
 
-    <div class="container">
+
+<div class="container">
 
     <p class="pull-right visible-xs">
             <button type="button" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-shopping-cart"></span> My Cart</button>
@@ -237,5 +238,6 @@
         text: 'Thumbnail'
       });
     </script>
+</div>
   </body>
 </html>
