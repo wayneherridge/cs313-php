@@ -142,9 +142,7 @@ $v = "1.0";
             <span class="icon-bar"></span>
         </button>
         	<a class="navbar-brand" href="index.php">PHP Shopping Cart</a>
-		<li class="nav-item active">
         	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      	</li>
         </div>
         <div class="collapse navbar-collapse">
 		
