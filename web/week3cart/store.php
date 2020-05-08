@@ -69,13 +69,13 @@
               <li>Color : Red</li>
             </ul>
             <form action="?" method="post">
-							<div class = "input-group">
-							<input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
-							<span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
-							</div>
-							<input type="hidden" name="item" value="One Shoe" />
-							<input type="hidden" name="price" value="2.10" />
-						</form>
+				<div class = "input-group">
+				    <input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
+				    <span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
+				</div>
+					<input type="hidden" name="item" value="Red Shoes" />
+					<input type="hidden" name="price" value="20.00" />
+			</form>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -88,8 +88,14 @@
               <li>Cameras : 20</li>
               <li>Zoom    : 30x</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
-          </div>
+            <form action="?" method="post">
+				<div class = "input-group">
+				    <input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
+				    <span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
+				</div>
+					<input type="hidden" name="item" value="iPhone 20" />
+					<input type="hidden" name="price" value="5000.00" />
+			</form>          </div>
         </div>
         <div class="card mb-4 box-shadow">
           <div class="card-header">
@@ -101,8 +107,14 @@
               <li>Size  : British 50 pence</li>
               <li>Value : $100</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
-          </div>
+            <form action="?" method="post">
+				<div class = "input-group">
+				    <input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
+				    <span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
+				</div>
+					<input type="hidden" name="item" value="VE Day Coin" />
+					<input type="hidden" name="price" value="100.00" />
+			</form>          </div>
         </div>
       </div>
 
