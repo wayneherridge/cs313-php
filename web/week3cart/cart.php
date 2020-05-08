@@ -39,6 +39,9 @@
 
 <!-- Put code here -->
 
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Payment</button>
+
+
     
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
