@@ -100,6 +100,25 @@
 					<input type="hidden" name="price" value="100.00" />
 			</form>          </div>
         </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">1 Cupcake</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><?php echo $currency;?>10</h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Size     : Medium</li>
+              <li>Frosting : Too Much</li>
+            </ul>
+            <form action="?" method="post">
+				<div class = "input-group">
+				    <input class="form-control" name="quantity" type="text" onkeypress="return isNumberKey(event)" maxlength="2" value="1">
+				    <span class = "input-group-btn"><input type="submit" class="btn btn-success" type="button" value="Add To Basket"></span>
+				</div>
+					<input type="hidden" name="item" value="1 Cupcake" />
+					<input type="hidden" name="price" value="10.00" />
+			</form>          </div>
+        </div>
       </div>
 
       <footer class="pt-4 my-md-5 pt-md-5 border-top">
