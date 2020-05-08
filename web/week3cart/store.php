@@ -1,3 +1,8 @@
+<?php
+    $currency = "$";
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
