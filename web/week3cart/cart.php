@@ -39,9 +39,9 @@
 
 <!-- Put code here -->
 
-    <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Payment</button>
-    <button class="btn btn-primary btn-lg btn-block" type="submit">Continue Shopping</button>
-    <button class="btn btn-primary btn-lg btn-block" type="submit">Cancel Purchase</button>
+    <button class="btn btn-primary btn-sm btn-block" type="submit">Confirm Payment</button>
+    <button class="btn btn-primary btn-sm btn-block" type="submit">Continue Shopping</button>
+    <button class="btn btn-primary btn-sm btn-block" type="submit">Cancel Purchase</button>
 
 
 
