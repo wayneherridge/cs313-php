@@ -44,7 +44,7 @@
               <li>Size  : UK 6</li>
               <li>Color : Red</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Add to Cart</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
           </div>
         </div>
         <div class="card mb-4 box-shadow">
@@ -70,7 +70,7 @@
               <li>Size  : British 50 pence</li>
               <li>Value : $100</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
