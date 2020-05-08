@@ -136,18 +136,18 @@ $v = "1.0";
     <div class="navbar navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        	<span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.php">PHP Shopping Cart</a>
-
+        </button>
+        	<a class="navbar-brand" href="index.php">PHP Shopping Cart</a>
+		<li class="nav-item active">
+        	<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      	</li>
         </div>
         <div class="collapse navbar-collapse">
-		<li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
+		
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </div><!-- /.navbar -->
