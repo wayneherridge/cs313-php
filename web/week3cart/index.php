@@ -389,7 +389,6 @@ $v = "1.0";
 					  <div class="form-group">
 						<div>
 						  <button type="submit" class="btn btn-success pull-right">Send Order</button>
-						  <button type="submit" class="btn btn-success pull-right">Continue Shopping</button>
 						</div>
 					  </div>
 					<input type="hidden" name="total" value="<?php echo $total;?>">
