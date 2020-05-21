@@ -2,15 +2,19 @@
 
 include("./includes/config.php");
 
-$searchTerm = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_STRING);
+$post_id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
 
 require "./includes/dbconnect.php";
+
 $db = get_db();
 
-    $statement->execute();
-	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
+$statement = $db->prepare('SELECT * FROM posts WHERE id = :id');
+
+$statement->execute([':id' => $post_id]);
+
+$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-	$statement->closeCursor();
+$statement->closeCursor();
 
 ?>
 

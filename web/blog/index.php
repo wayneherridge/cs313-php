@@ -12,7 +12,7 @@ if (!empty($searchTerm)) {
     //$statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
     $statement->execute(array('%'.$searchTerm.'%'));
 } else {
-    $statement = $db->prepare("SELECT title FROM posts");
+    $statement = $db->prepare("SELECT * FROM posts");
     $statement->execute();
 }
 
@@ -45,10 +45,8 @@ if (!empty($searchTerm)) {
 
 // Go through each result
 foreach ($blogposts as $row)
-    {
-		$title = $row['title'];
-		
-        echo "<p><a href='details.php?post=$title'><strong>$title</strong></a><p>";
+    {		
+        echo "<p><a href='details.php?post=$post[id]'><strong>$post[title]</strong></a><p>";
     }
 
 ?>
