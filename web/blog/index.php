@@ -15,7 +15,6 @@ if (!empty($searchTerm)) {
 }
     $statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
-    
 	$statement->closeCursor();
 
 ?>
