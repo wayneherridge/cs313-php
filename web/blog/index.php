@@ -1,10 +1,10 @@
 <?php
 
-include("includes/config.php");
+include("./includes/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "includes/dbconnect.php";
+require "./includes/dbconnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
@@ -22,12 +22,12 @@ if (!empty($searchTerm)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("includes/head.php");?>
+    <?php include("./includes/head.php");?>
 </head>
 
 <body>
 <header>
-        <?php include("includes/header.php"); ?>
+        <?php include("./includes/header.php"); ?>
 </header>
     
 <div class="container" id="main-content">
@@ -52,6 +52,6 @@ foreach ($blogposts as $row)
 
 </div>
 
-    <?php include("includes/footer.php");?>
+    <?php include("./includes/footer.php");?>
 </body>
 </html>
