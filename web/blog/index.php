@@ -43,6 +43,8 @@ if (!empty($searchTerm)) {
 
 <?php
 
+echo $blogposts;
+
 // Go through each result
 foreach ($blogposts as $row)
     {
