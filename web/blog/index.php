@@ -48,7 +48,7 @@ foreach ($blogposts as $row)
     {
 		$title = $row['title'];
 		
-        echo "<p><a href='details.php'><strong>$title</strong></a><p>";
+        echo "<p><a href='details.php?post=$title'><strong>$title</strong></a><p>";
     }
 
 ?>
