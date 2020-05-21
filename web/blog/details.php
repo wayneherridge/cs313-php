@@ -10,6 +10,8 @@ $db = get_db();
 if (isset($searchTerm)) {
     $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
     $statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
+} else {
+    $statement = $db->prepare("SELECT title FROM posts");
 }
     $statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +37,7 @@ if (isset($searchTerm)) {
 <?php
     foreach ($blogposts as $row)
     {
-        $body = $row['body'];
+		$body = $row['body'];
 		
         echo "<p><a href='index.php'><strong>$body</strong></a><p>";
     }
