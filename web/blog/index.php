@@ -8,9 +8,9 @@ require "./includes/dbconnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
-    $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
+    $statement = $db->prepare('SELECT * FROM posts WHERE title LIKE ?');
     //$statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
-    $statement->execute([':searchTerm'=>$searchTerm]);
+    $statement->execute(array($searchTerm).'%');
 } else {
     $statement = $db->prepare("SELECT title FROM posts");
     $statement->execute();
