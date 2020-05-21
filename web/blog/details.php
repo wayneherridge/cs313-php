@@ -8,7 +8,7 @@ require "./includes/dbconnect.php";
 
 $db = get_db();
 
-$statement = $db->prepare('SELECT * FROM posts WHERE id = :id');
+$statement = $db->prepare('SELECT * FROM posts WHERE post_id = :id');
 
 $statement->execute([':id' => $post_id]);
 
@@ -37,7 +37,7 @@ $statement->closeCursor();
     {
 		$body = $row['body'];
 		
-        echo "<p><a href='index.php?post=$body'><strong>$body</strong></a><p>";
+        echo "<p><a href='index.php'><strong>Back to Posts</strong></a><p>";
     }
 
 ?>
