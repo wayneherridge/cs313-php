@@ -15,9 +15,9 @@ if (!empty($searchTerm)) {
 } else {
     $statement = $db->prepare("SELECT title FROM posts");
 }
+    $statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-    $statement->execute();
 	$statement->closeCursor();
 
 ?>
