@@ -45,8 +45,10 @@ if (!empty($searchTerm)) {
 
 // Go through each result
 foreach ($blogposts as $row)
-    {		
-        echo "<p><a href='details.php?post=$post[id]'><strong>$post[title]</strong></a><p>";
+    {	
+        //$title = $row['title'];
+
+        echo "<p><a href='details.php?post={$row['id']}'><strong>{$row['title']}</strong></a><p>";
     }
 
 ?>
