@@ -2,7 +2,7 @@
 
 include("./includes/config.php");
 
-$post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_STRING);
+$post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT);
 
 require "./includes/dbconnect.php";
 
