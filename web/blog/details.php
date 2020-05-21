@@ -35,12 +35,12 @@ if (isset($searchTerm)) {
 	<h2>Blog Details</h2>
 
 <?php
-    // foreach ($blogposts as $row)
-    // {
-    //     $body = $row['body'];
+    foreach ($blogposts as $row)
+    {
+        $body = $row['body'];
 		
-    //     echo "<p><a href='index.php'><strong>$body</strong></a><p>";
-    // }
+        echo "<p><a href='index.php'><strong>$body</strong></a><p>";
+    }
 
 ?>
 
