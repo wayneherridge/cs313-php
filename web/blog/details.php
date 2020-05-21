@@ -8,8 +8,8 @@ require "./includes/dbconnect.php";
 $db = get_db();
 
 if (isset($searchTerm)) {
-    $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
-    $statement->bindValue(':searchTerm', $searchTerm);
+    $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%$searchTerm%'");
+    //$statement->bindValue(':searchTerm', $searchTerm);
 }
     $statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
