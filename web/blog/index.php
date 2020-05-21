@@ -34,7 +34,7 @@ if (!empty($searchTerm)) {
 <div class="container" id="main-content">
 	<h2>Blog Posts</h2>
 	
-	<form action="index.php" method="GET">
+	<form action="" method="GET">
     <input type="text" name="search">
     <button type="submit">Search</button>
     </form>
