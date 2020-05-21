@@ -32,7 +32,16 @@ if (!empty($searchTerm)) {
     
 <div class="container" id="main-content">
 	<h2>Blog Details</h2>
+    
+<?php
+    foreach ($blogposts as $row)
+    {
+		$body = $row['body'];
+		
+        echo "<p><a href='index.php?post=$body'><strong>$body</strong></a><p>";
+    }
 
+?>
 
 
 </div>
