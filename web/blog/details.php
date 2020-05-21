@@ -7,16 +7,17 @@ $searchTerm = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_STRING);
 require "./includes/dbconnect.php";
 $db = get_db();
 
-if (isset($searchTerm)) {
-    $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
-    $statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
-} else {
-    $statement = $db->prepare("SELECT title FROM posts");
-}
+// if (isset($searchTerm)) {
+//     $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
+//     $statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
+// } else {
+//     $statement = $db->prepare("SELECT title FROM posts");
+// }
     $statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
     
-	$statement->closeCursor();
+    $statement->closeCursor();
+    
 
 ?>
 
