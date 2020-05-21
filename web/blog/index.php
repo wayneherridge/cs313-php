@@ -9,13 +9,14 @@ $db = get_db();
 
 if (!empty($searchTerm)) {
     $statement = $db->prepare("SELECT * FROM posts WHERE title LIKE '%:searchTerm%'");
-    $statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
-    die('here!');
+    //$statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
+    $statement->execute([':searchTerm'=>$searchTerm]);
 } else {
     $statement = $db->prepare("SELECT title FROM posts");
+    $statement->execute();
 }
 
-    $statement->execute();
+    //$statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
 	$statement->closeCursor();
 
