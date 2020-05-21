@@ -38,7 +38,7 @@ if (!empty($searchTerm)) {
 	
 	<form action="index.php" method="GET">
     <input type="text" name="search">
-    <button type="submit">Submit</button>
+    <button type="submit">Search</button>
     </form>
 
 <?php
@@ -48,7 +48,7 @@ foreach ($blogposts as $row)
     {
 		$title = $row['title'];
 		
-        echo "<p><strong>$title</strong><p>";
+        echo "<p><a href='details.php'><strong>$title</strong></a><p>";
     }
 
 ?>

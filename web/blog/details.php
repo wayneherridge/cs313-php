@@ -16,7 +16,7 @@
 </header>
     
 <div class="container" id="main-content">
-	<h2>Details</h2>
+	<h2>Blog Details</h2>
 
 </div>
 
