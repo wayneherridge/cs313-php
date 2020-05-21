@@ -2,7 +2,7 @@
 
 include("./includes/config.php");
 
-$searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+$searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_NUMBER_INT);
 
 require "./includes/dbconnect.php";
 $db = get_db();
