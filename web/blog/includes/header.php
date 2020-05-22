@@ -10,7 +10,7 @@
         <a class="nav-link <?php if ($CURRENT_PAGE == "Index") {?>active<?php }?>" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
 	  <li class="nav-item active">
-        <a class="nav-link <?php if ($CURRENT_PAGE == "About")?>" href="about.php">About Us </a>
+        <a class="nav-link <?php if ($CURRENT_PAGE == "About") {?>active<?php }?>" href="about.php">About Us </a>
       </li>
 	  <li class="nav-item active">
         <a class="nav-link <?php if ($CURRENT_PAGE == "Contact") {?>active<?php }?>" href="contact.php">Contact Us </a>
@@ -20,7 +20,5 @@
       <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
-	<button type="button" class="btn btn-primary">Login</button>
-	<button type="button" class="btn btn-primary">SignUp</button>
   </div>
 </nav>
