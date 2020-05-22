@@ -9,10 +9,9 @@ $db = get_db();
 
 if (!empty($searchTerm)) {
     $statement = $db->prepare('SELECT * FROM posts WHERE title LIKE ?');
-    //$statement->bindValue(':searchTerm', $searchTerm, PDO::PARAM_STR);
     $statement->execute(array('%'.$searchTerm.'%'));
 } else {
-    $statement = $db->prepare("SELECT * FROM posts");
+    $statement = $db->prepare("SELECT * FROM posts ORDER BY pdate DESC");
     $statement->execute();
 }
 
