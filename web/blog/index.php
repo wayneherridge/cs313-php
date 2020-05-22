@@ -11,7 +11,7 @@ if (!empty($searchTerm)) {
     $statement = $db->prepare('SELECT * FROM posts WHERE title LIKE ?');
     $statement->execute(array('%'.$searchTerm.'%'));
 } else {
-    $statement = $db->prepare("SELECT * FROM posts ORDER BY pdate DESC");
+    $statement = $db->prepare("SELECT * FROM posts");
     $statement->execute();
 }
 
