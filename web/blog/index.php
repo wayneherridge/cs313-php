@@ -19,9 +19,6 @@ if (!empty($searchTerm)) {
     //$statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();
-    
-    $date = DateTime::createFromFormat('Y-m-d', $_POST['pdate']);
-    $pdate_new = $date->format('m-d-Y');
 
 ?>
 
