@@ -26,7 +26,9 @@
 	  <li class="nav-item active">
         <a class="nav-link <?php if ($CURRENT_PAGE == "About") {?>active<?php }?>" href="about.php">About Us </a>
       </li>
-
+	  <li class="nav-item active">
+        <a class="nav-link <?php if ($CURRENT_PAGE == "Contact") {?>active<?php }?>" href="contact.php">Contact Us </a>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
       <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
