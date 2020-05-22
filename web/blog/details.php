@@ -35,8 +35,11 @@ $statement->closeCursor();
 <?php
     foreach ($blogposts as $row)
     {
-		$body = $row['body'];
-		
+        
+        echo "<p><a href='details.php?post={$row['post_id']}'><strong>{$row['title']}</strong></a><p>";
+        echo "<p><a href='details.php?post={$row['post_id']}'><strong>{$row['body']}</strong></a><p>";
+        echo "<p><a href='details.php?post={$row['post_id']}'><strong>{$row['pdate']}</strong></a><p>";
+
         echo "<p><a href='index.php'><strong>Back to Posts</strong></a><p>";
     }
 
