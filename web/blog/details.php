@@ -36,7 +36,7 @@ $statement->closeCursor();
     foreach ($blogposts as $row)
     {
         
-        echo "<p><strong>{$row['title']}</strong><p>";
+        echo "<h3><strong>{$row['title']}</strong><h3>";
         echo "<p><strong>{$row['body']}</strong><p>";
         echo "<p><strong>{$row['pdate']}</strong><p>";
 
