@@ -3,9 +3,6 @@
 * File: createAccount.php
 ***********************************************************/
 
-// If you have an earlier version of PHP (earlier than 5.5)
-// You need to download and include password.php.
-//require("password.php");
 
 // get the data from the POST
 $username = $_POST['txtUser'];
@@ -26,7 +23,7 @@ $username = htmlspecialchars($username);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Connect to the database
-require("includes/dbConnect.php");
+require("./includes/dbConnect.php");
 $db = get_db();
 
 $query = 'INSERT INTO login(username, password) VALUES(:username, :password)';
