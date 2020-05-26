@@ -13,7 +13,7 @@ require "dbConnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
-    $statement = $db->prepare('SELECT * FROM scripture WHERE book LIKE ?');
+    $statement = $db->prepare('SELECT * FROM scripture WHERE content LIKE ?');
     $statement->execute(array('%'.$searchTerm.'%'));
 } else {
     $statement = $db->prepare("SELECT book, chapter, verse, content FROM scripture");
