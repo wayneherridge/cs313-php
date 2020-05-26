@@ -3,6 +3,9 @@
 * File: singup.php
 ***********************************************************/
 
+include("includes/config.php");
+
+
 ?>
 
 <!DOCTYPE html>
