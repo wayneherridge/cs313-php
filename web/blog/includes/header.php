@@ -22,3 +22,5 @@
     </form>
   </div>
 </nav>
+
+Your username is: <?= $username ?><br /><br />

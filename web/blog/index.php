@@ -1,5 +1,17 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: signIn.php");
+	die(); // we always include a die after redirects.
+}
+
 include("./includes/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
