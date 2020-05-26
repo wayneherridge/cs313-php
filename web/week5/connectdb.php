@@ -8,7 +8,7 @@ function get_db() {
 		$dbUrl = getenv('DATABASE_URL');
 
 		if (!isset($dbUrl) || empty($dbUrl)) {
-			$dbUrl = "pgsql:host=localhost;dbname=scripture_db";
+			$dbUrl = "pgsql:host=localhost;dbname=scriptureNotes";
 			$dbUser = "postgres";
 			$dbPassword = "";
 		} else {
