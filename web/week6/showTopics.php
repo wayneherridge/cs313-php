@@ -1,10 +1,6 @@
 <?php
 /**********************************************************
 * File: showTopics.php
-* Author: Br. Burton
-* 
-* Description: This file retrieves the scriptures and topics
-* from the DB.
 ***********************************************************/
 
 require("dbConnect.php");

@@ -1,11 +1,6 @@
 <?php
 /**********************************************************
 * File: topicEntry.php
-* Author: Br. Burton
-* 
-* Description: This is the PHP file that the user starts with.
-*   It has a form to enter a new scripture and topic.
-*   It posts to the insertTopic.php page.
 ***********************************************************/
 
 // The DB connection logic is in another file so it can be included
@@ -46,13 +41,6 @@ $db = get_db();
 	<label>Topics:</label><br />
 
 <?php
-// This section will now generate the available check boxes for topics
-// based on what is in the database
-
-// As before, it would be better to break this out into a separate function
-// in a separate file, that handled the DB interaction, and returned
-// a list of topics. But to keep things as clear as possible we can
-// also query and loop through the results, right here.
 
 try
 {

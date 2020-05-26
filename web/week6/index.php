@@ -1,10 +1,6 @@
 <?php
 /**********************************************************
 * File: viewScriptures.php
-* Author: Br. Burton
-* 
-* Description: This file shows an example of how to query a
-*   PostgreSQL database from PHP.
 ***********************************************************/
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
@@ -65,32 +61,11 @@ if (!empty($searchTerm)) {
 
 <?php
 
-// In this example, for simplicity, the query is executed
-// right here and the data echoed out as we iterate the query.
-
-// You could imagine that in a more involved application, we
-// would likely query the database in a completely separate file / function
-// and build a list of objects that held the components of each
-// scripture. Then, here on the page, we could simply call that 
-// function, and iterate through the list that was returned and
-// print each component.
 
 
-
-// First, prepare the statement
-
-// Notice that we avoid using "SELECT *" here. This is considered
-// good practice so we don't inadvertently bring back data we don't
-// want, especially if the database changes later.
-
-
-// Go through each result
-// Go through each result
 foreach ($scriptures as $row)
     {
-	// The variable "row" now holds the complete record for that
-	// row, and we can access the different values based on their
-	// name
+
 	$book = $row['book'];
 	$chapter = $row['chapter'];
 	$verse = $row['verse'];
@@ -101,12 +76,10 @@ foreach ($scriptures as $row)
 
 ?>
 
-
 </div>
 
-
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,15 +1,6 @@
 <?php
 /**********************************************************
 * File: insertTopic.php
-* Author: Br. Burton
-* 
-* Description: Takes input posted from topicEntry.php
-*   This file enters a new scripture into the database
-*   along with its associated topics.
-*
-*   This file does NOT do any rendering at all,
-*   instead it redirects the user to showTopics.php to see
-*   the resulting list.
 ***********************************************************/
 
 // get the data from the POST
@@ -79,9 +70,6 @@ catch (Exception $ex)
 // finally, redirect them to a new page to actually show the topics
 header("Location: showTopics.php");
 
-die(); // we always include a die after redirects. In this case, there would be no
-       // harm if the user got the rest of the page, because there is nothing else
-       // but in general, there could be things after here that we don't want them
-       // to see.
+die();
 
 ?>
