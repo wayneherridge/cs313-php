@@ -3,11 +3,6 @@
 * File: singup.php
 ***********************************************************/
 
-include("/includes/config.php");
-
-require "/includes/dbconnect.php";
-$db = get_db();
-
 ?>
 
 <!DOCTYPE html>
