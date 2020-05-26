@@ -42,10 +42,10 @@ if (!empty($searchTerm)) {
         <a class="nav-link <?php if ($CURRENT_PAGE == "Index") {?>active<?php }?>" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
 	  <li class="nav-item active">
-        <a class="nav-link <?php if ($CURRENT_PAGE == "About") {?>active<?php }?>" href="showTopics.php">Show Topics </a>
+        <a class="nav-link <?php if ($CURRENT_PAGE == "showTopics") {?>active<?php }?>" href="showTopics.php">Show Topics </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link <?php if ($CURRENT_PAGE == "About") {?>active<?php }?>" href="topicEntry.php">Topic Entry </a>
+        <a class="nav-link <?php if ($CURRENT_PAGE == "topicEntry") {?>active<?php }?>" href="topicEntry.php">Topic Entry </a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
