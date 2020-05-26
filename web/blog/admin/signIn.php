@@ -17,7 +17,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	// Connect to the DB
-	require("/includes/dbConnect.php");
+	require("./includes/dbConnect.php");
 	$db = get_db();
 
 	$query = 'SELECT password FROM usertable WHERE username=:username';

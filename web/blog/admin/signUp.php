@@ -3,7 +3,7 @@
 * File: singup.php
 ***********************************************************/
 
-include("/includes/config.php");
+include("./includes/config.php");
 
 
 ?>
