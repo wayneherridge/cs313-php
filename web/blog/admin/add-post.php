@@ -1,5 +1,17 @@
 <?php 
 
+session_start();
+
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: admin/signIn.php");
+	die(); // we always include a die after redirects.
+}
+
 include("includes/config.php");
 
 require "includes/dbconnect.php";
