@@ -40,6 +40,8 @@ $statement->bindValue(':password', $hashedPassword);
 
 $statement->execute();
 
+echo ($statement);
+
 
 // finally, redirect them to the sign in page
 header("Location: signIn.php");
