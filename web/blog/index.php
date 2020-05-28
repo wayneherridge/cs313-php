@@ -12,11 +12,11 @@
 // 	die(); // we always include a die after redirects.
 // }
 
-include("./includes/config.php");
+include("/admin/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "./includes/dbconnect.php";
+require "/admin/dbconnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
