@@ -12,11 +12,11 @@
 // 	die(); // we always include a die after redirects.
 // }
 
-include("/admin/config.php");
+include("admin/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "/admin/dbconnect.php";
+require "admin/dbconnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
@@ -36,12 +36,12 @@ if (!empty($searchTerm)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("./includes/head.php");?>
+    <?php include("includes/head.php");?>
 </head>
 
 <body>
 <header>
-        <?php include("./includes/header.php"); ?>
+        <?php include("includes/header.php"); ?>
 </header>
     
 <div class="container" id="main-content">
