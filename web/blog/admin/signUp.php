@@ -11,7 +11,7 @@ include("config.php");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sign Up</title>
+    <?php include("./includes/head.php");?>
 </head>
 
 <body>
