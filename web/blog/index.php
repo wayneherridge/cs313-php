@@ -1,16 +1,16 @@
 <?php
 
-session_start();
+// session_start();
 
-if (isset($_SESSION['username']))
-{
-	$username = $_SESSION['username'];
-}
-else
-{
-	header("Location: admin/signIn.php");
-	die(); // we always include a die after redirects.
-}
+// if (isset($_SESSION['username']))
+// {
+// 	$username = $_SESSION['username'];
+// }
+// else
+// {
+// 	header("Location: admin/signIn.php");
+// 	die(); // we always include a die after redirects.
+// }
 
 include("./includes/config.php");
 
