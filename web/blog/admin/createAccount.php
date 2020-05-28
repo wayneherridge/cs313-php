@@ -8,9 +8,6 @@
 $username = $_POST['txtUser'];
 $password = $_POST['txtPassword'];
 
-echo ($username);
-echo ($password);
-
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == "")
 {
@@ -39,8 +36,6 @@ $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 
 $statement->execute();
-
-echo ($statement);
 
 
 // finally, redirect them to the sign in page
