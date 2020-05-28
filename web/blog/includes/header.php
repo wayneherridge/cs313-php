@@ -20,6 +20,11 @@
       <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Signup</button>
+
+
   </div>
 </nav>
 
