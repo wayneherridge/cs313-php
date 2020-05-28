@@ -27,6 +27,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 
 	$result = $statement->execute();
 
+	echo ($statement);
+
 	if ($result)
 	{
 		$row = $statement->fetch();
