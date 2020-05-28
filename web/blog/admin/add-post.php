@@ -2,7 +2,7 @@
 
 include("includes/config.php");
 
-require "./includes/dbconnect.php";
+require "includes/dbconnect.php";
 $db = get_db();
 
 $query = "INSERT INTO posts VALUES ('$_POST[pdate]','$_POST[title]',

@@ -4,7 +4,7 @@
 ***********************************************************/
 
 
-include("/includes/config.php");
+include("includes/config.php");
 
 session_start();
 
@@ -17,7 +17,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	// Connect to the DB
-	require("/includes/dbConnect.php");
+	require("includes/dbConnect.php");
 	$db = get_db();
 
 	$query = 'SELECT password FROM usertable WHERE username=:username';
@@ -37,7 +37,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: ./index.php");
+			header("Location: index.php");
 			die(); // we always include a die after redirects.
 		}
 		else
