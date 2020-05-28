@@ -8,6 +8,9 @@
 $username = $_POST['txtUser'];
 $password = $_POST['txtPassword'];
 
+echo ($username);
+echo ($password);
+
 if (!isset($username) || $username == ""
 	|| !isset($password) || $password == "")
 {
