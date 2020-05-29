@@ -3,11 +3,11 @@
 * File: signOut.php
 ***********************************************************/
 
-include("config.php");
+include("admin/config.php");
 
 //require("password.php"); // used for password hashing.
 session_start();
 unset($_SESSION['username']);
 
-header("Location: signIn.php");
+header("Location: admin/signIn.php");
 die(); // we always include a die after redirects.

@@ -8,7 +8,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
-	header("Location: /admin/signIn.php");
+	header("Location: signIn.php");
 	die(); // we always include a die after redirects.
 }
 

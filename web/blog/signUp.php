@@ -3,7 +3,7 @@
 * File: singup.php
 ***********************************************************/
 
-include("config.php");
+include("admin/config.php");
 
 
 ?>
@@ -11,7 +11,7 @@ include("config.php");
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("./includes/head.php");?>
+    <?php include("/includes/head.php");?>
 </head>
 
 <body>
