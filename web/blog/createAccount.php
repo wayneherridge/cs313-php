@@ -1,13 +1,6 @@
 <?php
 /**********************************************************
 * File: createAccount.php
-* Author: Br. Burton
-* 
-* Description: Accepts a new username and password on the
-*	POST variable, and creates it in the DB.
-*
-* The user is then redirected to the signIn.php page.
-*
 ***********************************************************/
 
 // If you have an earlier version of PHP (earlier than 5.5)
@@ -33,7 +26,7 @@ $username = htmlspecialchars($username);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Connect to the database
-require("dbConnect.php");
+require("dbconnect.php");
 $db = get_db();
 
 $query = 'INSERT INTO login(username, password) VALUES(:username, :password)';

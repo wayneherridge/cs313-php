@@ -1,14 +1,6 @@
 <?php
 /**********************************************************
 * File: singup.php
-* Author: Br. Burton
-* 
-* Description: Allows a user to enter a new username
-*   and password to add to the DB.
-*
-* It posts to a file called "createAccount.php"
-*   which does the actual creation.
-*
 ***********************************************************/
 ?>
 
