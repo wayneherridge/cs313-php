@@ -25,7 +25,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 require("/db/dbConnect.php");
 $db = get_db();
 
-$query = 'INSERT INTO public.usertable(username, password) VALUES(:username, :password)';
+$query = 'INSERT INTO usertable(username, password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 
@@ -35,7 +35,6 @@ $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 
 $statement->execute();
-
 
 // finally, redirect them to the sign in page
 header("Location: signIn.php");
