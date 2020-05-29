@@ -74,7 +74,7 @@ if ($badLogin)
 
 <h1>Please sign in below:</h1>
 
-<form id="mainForm" action="admin/signIn.php" method="POST">
+<form id="mainForm" action="signIn.php" method="POST">
 
 	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
 	<label for="txtUser">Username</label>
@@ -90,7 +90,7 @@ if ($badLogin)
 
 <br /><br />
 
-Or <a href="admin/signUp.php">Sign up</a> for a new account.
+Or <a href="signUp.php">Sign up</a> for a new account.
 
 </div>
 
