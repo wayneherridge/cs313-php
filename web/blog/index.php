@@ -12,11 +12,11 @@
 // 	die(); // we always include a die after redirects.
 // }
 
-include("admin/config.php");
+include("config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "admin/dbconnect.php";
+require "dbconnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
@@ -62,7 +62,7 @@ foreach ($blogposts as $row)
 
 </div>
 
-    <?php include("./includes/footer.php");?>
+    <?php include("includes/footer.php");?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

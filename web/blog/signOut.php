@@ -3,7 +3,7 @@
 * File: signOut.php
 ***********************************************************/
 
-include("admin/config.php");
+include("config.php");
 
 //require("password.php"); // used for password hashing.
 session_start();

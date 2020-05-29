@@ -1,10 +1,10 @@
 <?php
 
-include("admin/config.php");
+include("config.php");
 
 $post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT);
 
-require "admin/dbconnect.php";
+require "dbconnect.php";
 
 $db = get_db();
 

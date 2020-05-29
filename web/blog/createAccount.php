@@ -23,7 +23,7 @@ $username = htmlspecialchars($username);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Connect to the database
-require("/admin/dbconnect.php");
+require("dbconnect.php");
 $db = get_db();
 
 $query = 'INSERT INTO usertable(username, password) VALUES(:username, :password)';

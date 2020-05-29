@@ -12,9 +12,9 @@ else
 	die(); // we always include a die after redirects.
 }
 
-include("/admin/config.php");
+include("config.php");
 
-require "/admin/dbconnect.php";
+require "dbconnect.php";
 $db = get_db();
 
 $query = "INSERT INTO posts VALUES ('$_POST[pdate]','$_POST[title]',
