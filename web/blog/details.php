@@ -1,57 +1,54 @@
 <?php
 
-
 include("config.php");
 
-$searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+$post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT);
 
 require "dbConnect.php";
+
 $db = get_db();
 
-if (!empty($searchTerm)) {
-    $statement = $db->prepare('SELECT * FROM posts WHERE title LIKE ?');
-    $statement->execute(array('%'.$searchTerm.'%'));
-} else {
-    $statement = $db->prepare("SELECT * FROM posts");
-    $statement->execute();
-}
+$statement = $db->prepare('SELECT * FROM posts WHERE post_id = :id');
 
-    //$statement->execute();
-	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
-    $statement->closeCursor();
+$statement->execute([':id' => $post_id]);
+
+$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+$statement->closeCursor();
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("includes/head.php");?>
+    <?php include("/includes/head.php");?>
 </head>
 
 <body>
 <header>
-        <?php include("includes/header.php"); ?>
+        <?php include("/includes/header.php"); ?>
 </header>
     
 <div class="container" id="main-content">
-	<h2>Blog Posts</h2>
-
+	<h2>Blog Details</h2>
+    
 <?php
+    foreach ($blogposts as $row)
+    {
+        
+        echo "<h3><strong>{$row['title']}</strong></h3>";
+        echo "<p><strong>{$row['body']}</strong><p>";
+        echo "<p><strong>{$row['pdate']}</strong><p>";
 
-// Go through each result
-foreach ($blogposts as $row)
-    {	
-
-        echo "<p><a href='details.php?post={$row['post_id']}'><strong>{$row['title']}</strong></a><p>";
-        echo "<p>{$row['pdate']}<p>";
-
+        echo "<p><a href='index.php'>Back to Posts</a><p>";
     }
 
 ?>
 
+
 </div>
 
-    <?php include("includes/footer.php");?>
+    <?php include("/includes/footer.php");?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
