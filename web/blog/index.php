@@ -1,11 +1,11 @@
 <?php
 
 
-include("/db/config.php");
+include("db/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "/db/dbConnect.php";
+require "db/dbConnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
@@ -25,12 +25,12 @@ if (!empty($searchTerm)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("/includes/head.php");?>
+    <?php include("includes/head.php");?>
 </head>
 
 <body>
 <header>
-        <?php include("/includes/header.php"); ?>
+        <?php include("includes/header.php"); ?>
 </header>
     
 <div class="container" id="main-content">
@@ -51,7 +51,7 @@ foreach ($blogposts as $row)
 
 </div>
 
-    <?php include("/includes/footer.php");?>
+    <?php include("includes/footer.php");?>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

@@ -1,10 +1,10 @@
 <?php
 
-include("/db/config.php");
+include("db/config.php");
 
 $post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT);
 
-require "/db/dbConnect.php";
+require "db/dbConnect.php";
 
 $db = get_db();
 
@@ -21,12 +21,12 @@ $statement->closeCursor();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php include("/includes/head.php");?>
+    <?php include("includes/head.php");?>
 </head>
 
 <body>
 <header>
-        <?php include("/includes/header.php"); ?>
+        <?php include("includes/header.php"); ?>
 </header>
     
 <div class="container" id="main-content">
