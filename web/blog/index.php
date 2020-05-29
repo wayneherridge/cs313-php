@@ -15,8 +15,6 @@ if (!empty($searchTerm)) {
     $statement = $db->prepare("SELECT * FROM posts");
     $statement->execute();
 }
-
-    //$statement->execute();
 	$blogposts = $statement->fetchAll(PDO::FETCH_ASSOC);
     $statement->closeCursor();
 
