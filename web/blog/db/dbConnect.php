@@ -9,7 +9,7 @@ function get_db() {
       // Use Local DB
       $dbUser = 'postgres';
       $dbPassword = 'password123';
-      $connection = 'pgsql:host=localhost;dbname=blog';
+      $connection = 'pgsql:host=localhost;dbname=Blog';
     } else {
       // Use Remote DB
       $dbOpts = parse_url($dbUrl);
