@@ -1,11 +1,11 @@
 <?php
 
 
-include("config.php");
+include("db/config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "dbConnect.php";
+require "db/dbConnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {
