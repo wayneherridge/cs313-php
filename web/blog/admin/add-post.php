@@ -8,13 +8,13 @@ if (isset($_SESSION['username']))
 }
 else
 {
-	header("Location: signIn.php");
+	header("Location: admin/signIn.php");
 	die(); // we always include a die after redirects.
 }
 
-include("config.php");
+include("admin/config.php");
 
-require "dbconnect.php";
+require "admin/dbconnect.php";
 $db = get_db();
 
 $query = "INSERT INTO posts VALUES ('$_POST[pdate]','$_POST[title]',
@@ -38,7 +38,7 @@ $result = pg_query($query);
 <div class="container" id="main-content">
 	<h2>Add Post</h2>
 
-    <form action="add-post.php" method="post"> 
+    <form action="index.php" method="post"> 
     <label id="first"> Post Date:</label><br/>
     <input type="date" name="pdate"><br/>
 
