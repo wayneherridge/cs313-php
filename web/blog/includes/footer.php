@@ -1,3 +1,3 @@
 <div class="footer">
-	&copy; <?php print date("Y");?>
+	&copy; Wayne Herridge <?php print date("Y");?>
 </div>
