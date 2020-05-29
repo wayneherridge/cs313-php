@@ -1,14 +1,14 @@
 <?php
 	switch ($_SERVER["SCRIPT_NAME"]) {
-		case "/details.php":
+		case "details.php":
 			$CURRENT_PAGE = "Details"; 
 			$PAGE_TITLE = "Blog Details";
 			break;
-		case "/about.php":
+		case "about.php":
 			$CURRENT_PAGE = "About"; 
 			$PAGE_TITLE = "About Us";
 			break;
-		case "/contact.php":
+		case "contact.php":
 			$CURRENT_PAGE = "Contact"; 
 			$PAGE_TITLE = "Contact Us";
 			break;
