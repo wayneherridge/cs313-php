@@ -1,14 +1,26 @@
 <?php
 /**********************************************************
 * File: signIn.php
+* Author: Br. Burton
+* 
+* Description: This page has a form for the user to sign in.
+*
+* In this case, to show another approach, we will have this
+* page have two purposes, it will have the form for signing
+* in, but it will also have the logic to check a username
+* and password and redirect the user to the home page if
+* everything checks out. Thus it will post to itself.
 ***********************************************************/
 
-
-include("config.php");
-
+// If you have an earlier version of PHP (earlier than 5.5)
+// You need to download and include password.php.
+//require("password.php"); // used for password hashing.
 session_start();
 
 $badLogin = false;
+
+// First check to see if we have post variables, if not, just
+// continue on as always.
 
 if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 {
@@ -17,17 +29,15 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	// Connect to the DB
-	require("dbconnect.php");
+	require("dbConnect.php");
 	$db = get_db();
 
-	$query = 'SELECT password FROM usertable WHERE username=:username';
+	$query = 'SELECT password FROM login WHERE username=:username';
 
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
 
 	$result = $statement->execute();
-
-	echo ($statement);
 
 	if ($result)
 	{
@@ -39,7 +49,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: index.php");
+			header("Location: home.php");
 			die(); // we always include a die after redirects.
 		}
 		else
@@ -54,6 +64,8 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	}
 }
 
+// If we get to this point without having redirected, then it means they
+// should just see the login form.
 ?>
 
 <!DOCTYPE html>

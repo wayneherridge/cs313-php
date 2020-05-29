@@ -1,16 +1,21 @@
 <?php
 /**********************************************************
 * File: singup.php
+* Author: Br. Burton
+* 
+* Description: Allows a user to enter a new username
+*   and password to add to the DB.
+*
+* It posts to a file called "createAccount.php"
+*   which does the actual creation.
+*
 ***********************************************************/
-
-include("config.php");
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("includes/head.php");?>
+	<title>Sign Up</title>
 </head>
 
 <body>
