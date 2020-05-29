@@ -5,13 +5,12 @@
 
 include("admin/config.php");
 
-
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <?php include("/includes/head.php");?>
+    <?php include("includes/head.php");?>
 </head>
 
 <body>

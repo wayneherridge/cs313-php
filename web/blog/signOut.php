@@ -9,5 +9,5 @@ include("admin/config.php");
 session_start();
 unset($_SESSION['username']);
 
-header("Location: admin/signIn.php");
+header("Location: signIn.php");
 die(); // we always include a die after redirects.
