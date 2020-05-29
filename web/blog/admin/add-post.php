@@ -8,13 +8,13 @@ if (isset($_SESSION['username']))
 }
 else
 {
-	header("Location: admin/signIn.php");
+	header("Location: /admin/signIn.php");
 	die(); // we always include a die after redirects.
 }
 
-include("admin/config.php");
+include("/admin/config.php");
 
-require "admin/dbconnect.php";
+require "/admin/dbconnect.php";
 $db = get_db();
 
 $query = "INSERT INTO posts VALUES ('$_POST[pdate]','$_POST[title]',
