@@ -14,7 +14,7 @@ else
 
 include("config.php");
 
-require "dbconnect.php";
+require "dbConnect.php";
 $db = get_db();
 
 $query = "INSERT INTO posts VALUES ('$_POST[pdate]','$_POST[title]',

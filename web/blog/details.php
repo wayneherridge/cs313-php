@@ -4,7 +4,7 @@ include("config.php");
 
 $post_id = filter_input(INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT);
 
-require "dbconnect.php";
+require "dbConnect.php";
 
 $db = get_db();
 

@@ -1,22 +1,11 @@
 <?php
 
-// session_start();
-
-// if (isset($_SESSION['username']))
-// {
-// 	$username = $_SESSION['username'];
-// }
-// else
-// {
-// 	header("Location: admin/signIn.php");
-// 	die(); // we always include a die after redirects.
-// }
 
 include("config.php");
 
 $searchTerm = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
 
-require "dbconnect.php";
+require "dbConnect.php";
 $db = get_db();
 
 if (!empty($searchTerm)) {

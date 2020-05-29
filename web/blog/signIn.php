@@ -3,6 +3,9 @@
 * File: signIn.php
 ***********************************************************/
 
+// If you have an earlier version of PHP (earlier than 5.5)
+// You need to download and include password.php.
+//require("password.php"); // used for password hashing.
 session_start();
 
 $badLogin = false;
@@ -17,10 +20,10 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 	$password = $_POST['txtPassword'];
 
 	// Connect to the DB
-	require("dbconnect.php");
+	require("dbConnect.php");
 	$db = get_db();
 
-	$query = 'SELECT password FROM login WHERE username=:username';
+	$query = 'SELECT password FROM usertable WHERE username=:username';
 
 	$statement = $db->prepare($query);
 	$statement->bindValue(':username', $username);
@@ -37,7 +40,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 		{
 			// password was correct, put the user on the session, and redirect to home
 			$_SESSION['username'] = $username;
-			header("Location: index.php");
+			header("Location: home.php");
 			die(); // we always include a die after redirects.
 		}
 		else
