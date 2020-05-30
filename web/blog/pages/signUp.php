@@ -23,25 +23,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($result) {
             $message = "Username already exists";
             exit;
-        }
-
-        // Get the hashed password.
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-        $query = $db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
-
-        $query->execute([':username' => $username, ':password' => $hashedPassword]);
-
-        $result = $query->rowCount();
-
-        $query->closeCursor();
-
-        if ($result) {
-            header("Location: {$baseURI}sign-in");
-            exit;
         } else {
-            $message = "Failed to create User";
-            exit;
+            // Get the hashed password.
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            $query = $db->prepare('INSERT INTO users (username, password) VALUES (:username, :password)');
+
+            $query->execute([':username' => $username, ':password' => $hashedPassword]);
+
+            $result = $query->rowCount();
+
+            $query->closeCursor();
+
+            if ($result) {
+                header("Location: {$baseURI}sign-in");
+                exit;
+            } else {
+                $message = "Failed to create User";
+                exit;
+            }
         }
 
         // finally, redirect them to the sign in page
