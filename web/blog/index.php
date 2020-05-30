@@ -32,14 +32,17 @@ switch ($uri) {
     case '/add-post':
         $title = "Add Post";
         require 'pages/admin/addPost.php';
+        exit;
         break;
     case '/sign-up':
         $title = "Sign Up";
         require 'pages/signUp.php';
+        exit;
         break;
     case '/sign-in':
         $title = "Sign In";
         require 'pages/signIn.php';
+        exit;
         break;
     case '/sign-out':
         session_destroy();
@@ -48,6 +51,7 @@ switch ($uri) {
     case '/view-post':
         $title = "View Post";
         require 'pages/post.php';
+        exit;
         break;
     default:
         echo '404: Page not found.';
