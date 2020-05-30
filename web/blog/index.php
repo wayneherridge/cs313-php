@@ -11,7 +11,7 @@ $basePath = __DIR__ . '/';
 $url = explode('index.php', $_SERVER['PHP_SELF']);
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-$action = trim(str_replace($url[0], "", $uri));
+$action = trim(str_replace($url[0], "", $uri),'/');
 
 // Subfolder
 $baseURI = $url[0];
