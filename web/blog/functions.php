@@ -26,15 +26,16 @@ function guest()
     }
 }
 
-// function protect($role = 'user')
-// {
-//     $user = auth();
-//     if (!$user) {
-//         header("Location: {$baseURI}sign-in");
-//         exit; // we always include a die after redirects.
-//     }
-//     if (!$user['is_admin'] && $role === 'admin') {
-//         die('This action is not authorized');
-//     }
-//     return $user;
-// } 
+function protect() {
+    // Get the Authenticated User
+    $user = auth();
+    if (!$user) {
+        return header('Location: ' . $baseURI . '/');
+        exit;
+    }
+    if (!$user['admin']) {
+        return header('Location: ' . $baseURI . '/');
+        exit;
+    }
+    return $user;
+}
