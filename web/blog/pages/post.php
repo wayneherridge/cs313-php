@@ -15,6 +15,8 @@ $query->closeCursor();
 ?>
 <?php require $basePath . '/partials/header.php';?>
 
+
+
 <div>
     <h3><?=$blogpost['title'];?></h3>
     <p><?=$blogpost['pdate'];?></p>
