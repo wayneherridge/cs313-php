@@ -34,13 +34,13 @@
       <img src="/images/guitar.jpg" class="d-block w-75" alt="Guitar">
   </div>
   <div class="carousel-item">
-    <img src="images/headphones.jpg" class="d-block w-75" alt="Headphones">
+    <img src="/images/headphones.jpg" class="d-block w-75" alt="Headphones">
   </div>
   <div class="carousel-item">
-    <img src="images/mixer.jpg" class="d-block w-75" alt="Sound Mixer">
+    <img src="/images/mixer.jpg" class="d-block w-75" alt="Sound Mixer">
   </div>
   <div class="carousel-item">
-      <img src="images/speaker.jpg" class="d-block w-75" alt="Speaker">
+      <img src="/images/speaker.jpg" class="d-block w-75" alt="Speaker">
   </div>
 </div>
 </div>
