@@ -26,20 +26,20 @@ switch ($uri) {
     case '/':
     case '/home':
         $title = "Home";
-        require 'pages/home.php';
+        require '/pages/home.php';
         exit;
         break;
     case '/add-post':
         $title = "Add Post";
-        require 'pages/admin/addPost.php';
+        require '/pages/admin/addPost.php';
         break;
     case '/sign-up':
         $title = "Sign Up";
-        require 'pages/signUp.php';
+        require '/pages/signUp.php';
         break;
     case '/sign-in':
         $title = "Sign In";
-        require 'pages/signIn.php';
+        require '/pages/signIn.php';
         break;
     case '/sign-out':
         session_destroy();
@@ -47,7 +47,7 @@ switch ($uri) {
         break;
     case '/view-post':
         $title = "View Post";
-        require 'pages/post.php';
+        require '/pages/post.php';
         break;
     default:
         echo '404: Page not found.';
