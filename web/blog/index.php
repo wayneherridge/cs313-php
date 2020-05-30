@@ -6,7 +6,7 @@ session_start();
 require __DIR__ . '/core/dbconnect.php';
 require __DIR__ . '/functions.php';
 
-$basePath = __DIR__ . '/';
+$basePath = __DIR__;
 
 $url = explode('index.php', $_SERVER['PHP_SELF']);
 
