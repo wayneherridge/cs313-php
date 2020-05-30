@@ -19,20 +19,22 @@ function auth()
 
 function guest()
 {
-    if (isset($_SESSION['user'])) {
-        return false;
+    if (!isset($_SESSION['user'])) {
+        return true;
     } else {
-        header("Location: {$baseURI}/");
-        exit;
+        return false;
     }
 }
 
-function protect()
+function protect($role = 'user')
 {
     $user = auth();
-    if (!$user['is_admin']) {
+    if (!$user) {
         header("Location: {$baseURI}sign-in");
         exit; // we always include a die after redirects.
     }
+    if (!$user['is_admin'] && $role === 'admin') {
+        die('This action is not authorized');
+    }
     return $user;
-}
+} 
