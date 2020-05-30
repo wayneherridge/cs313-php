@@ -9,6 +9,7 @@ require __DIR__ . '/functions.php';
 $basePath = __DIR__ . '/';
 
 $url = explode('index.php', $_SERVER['PHP_SELF']);
+var_dump($url);
 
 // Subfolder
 $baseURI = $url[0];
