@@ -13,8 +13,7 @@ function auth()
     if (isset($_SESSION['user'])) {
         return $_SESSION['user'];
     } else {
-        header("Location: {$baseURI}sign-in");
-        exit;
+        return false;
     }
 }
 
