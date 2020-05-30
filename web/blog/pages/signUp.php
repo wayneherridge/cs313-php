@@ -12,6 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = "Missing Registeration Info";
     } else {
         // UNIQUE CHECK
+        $query = $db->prepare('SELECT * FROM users WHERE username = :username');
+
+        $query->execute([':username' => $username]);
+
+        $result = $query->rowCount();
+
+        $query->closeCursor();
 
         // Get the hashed password.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
