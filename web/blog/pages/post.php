@@ -20,7 +20,7 @@ $query->closeCursor();
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
 
-    echo "<p><a href='index.php'>Back to Posts</a><p>";
+    echo "<p><a href='home.php'>Back to Posts</a><p>";
 
 </div>
 
