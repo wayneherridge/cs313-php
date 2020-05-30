@@ -31,7 +31,7 @@
 <div id="carouselSlidesOnly" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
   <div class="carousel-item active">
-      <img src="images/guitar.jpg" class="d-block w-75" alt="Guitar">
+      <img src="/images/guitar.jpg" class="d-block w-75" alt="Guitar">
   </div>
   <div class="carousel-item">
     <img src="images/headphones.jpg" class="d-block w-75" alt="Headphones">
