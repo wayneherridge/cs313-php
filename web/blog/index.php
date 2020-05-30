@@ -6,19 +6,12 @@ session_start();
 require __DIR__ . '/core/dbconnect.php';
 require __DIR__ . '/functions.php';
 
-$basePath = __DIR__;
-
-
-
+$basePath = __DIR__ . '/';
 
 $url = explode('index.php', $_SERVER['PHP_SELF']);
 
 // Subfolder
 $baseURI = $url[0];
-
-echo $basePath;
-echo $baseURI;
-exit;
 
 // URI (For Router)
 $uri = $url[1];
