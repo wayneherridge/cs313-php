@@ -24,12 +24,12 @@ $statement->closeCursor();
   </div>
 </div>
 
-<div>
+<!-- <div>
     <h3><?=$post['title'];?></h3>
     <p><?=$post['pDate'];?></p>
     <p><?=$post['body'];?></p>
     <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
-</div>
+</div> -->
 <?php endforeach;?>
 
 <?php require $basePath . '/partials/footer.php';
