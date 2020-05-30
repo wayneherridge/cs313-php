@@ -20,6 +20,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $query->closeCursor();
 
+        if ($result) {
+            $message = "Username already exists";
+            exit;
+        }
+
         // Get the hashed password.
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
@@ -36,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         } else {
             $message = "Failed to create User";
+            exit;
         }
 
         // finally, redirect them to the sign in page
