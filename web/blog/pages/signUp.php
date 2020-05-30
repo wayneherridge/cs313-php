@@ -22,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($result) {
             $message = "Username already exists";
-            exit;
         } else {
             // Get the hashed password.
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
