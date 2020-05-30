@@ -8,7 +8,7 @@ function getDB()
     if (empty($dbUrl)) {
         // Use Local DB
         $dbUser = 'postgres';
-        $dbPassword = 'Password123';
+        $dbPassword = 'Secret#01';
         $connection = 'pgsql:host=localhost;dbname=Blog';
     } else {
         // Use Remote DB
