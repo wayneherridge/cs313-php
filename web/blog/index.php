@@ -15,6 +15,7 @@ $baseURI = $url[0];
 
 // URI (For Router)
 $uri = $url[1];
+var_dump($uri);
 
 if (empty($uri)) {
     $uri = '/';
