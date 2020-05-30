@@ -1,5 +1,5 @@
 <?php
-$user = auth(); // protect();
+$user = protect();
 
 $user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
 $pDate = filter_input(INPUT_POST, 'pDate', FILTER_SANITIZE_STRING);
