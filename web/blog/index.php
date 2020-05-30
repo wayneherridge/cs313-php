@@ -9,53 +9,53 @@ require __DIR__ . '/functions.php';
 $basePath = __DIR__ . '/';
 
 $url = explode('index.php', $_SERVER['PHP_SELF']);
-var_dump($url);
+$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+$action = str_replace($url[0], "", $uri);
 
 // Subfolder
 $baseURI = $url[0];
 
-// URI (For Router)
-$uri = $url[1];
-var_dump($uri);
-
-if (empty($uri)) {
-    $uri = '/';
+if (empty($action)) {
+    $action = '/';
 }
 
 $db = getDB();
 
-switch ($uri) {
+switch ($action) {
     case '/':
-    case '/home':
+    case 'home':
         $title = "Home";
         require 'pages/home.php';
         exit;
         break;
-    case '/add-post':
+    case 'add-post':
         $title = "Add Post";
         require 'pages/admin/addPost.php';
         exit;
         break;
-    case '/sign-up':
+    case 'sign-up':
         $title = "Sign Up";
         require 'pages/signUp.php';
         exit;
         break;
-    case '/sign-in':
+    case 'sign-in':
         $title = "Sign In";
         require 'pages/signIn.php';
         exit;
         break;
-    case '/sign-out':
+    case 'sign-out':
         session_destroy();
         header('Location: ' . $baseURI);
+        exit;
         break;
-    case '/view-post':
+    case 'view-post':
         $title = "View Post";
         require 'pages/post.php';
         exit;
         break;
     default:
         echo '404: Page not found.';
+        exit;
         break;
 }
