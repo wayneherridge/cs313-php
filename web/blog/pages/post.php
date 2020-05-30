@@ -20,7 +20,7 @@ $query->closeCursor();
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
 
-    <?= "<p><a href='home.php'>Back to Posts</a><p>"; ?>
+    <a href="<?=$baseURI?>">View</a>
 
 </div>
 
