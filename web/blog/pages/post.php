@@ -19,6 +19,9 @@ $query->closeCursor();
     <h3><?=$blogpost['title'];?></h3>
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
+
+    echo "<p><a href='index.php'>Back to Posts</a><p>";
+
 </div>
 
 <?php require $basePath . '/partials/footer.php';
