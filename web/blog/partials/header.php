@@ -48,9 +48,9 @@
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Signup</button>
+            <a href="#" class="btn btn-info" role="button">Login</a>
+            <a href="#" class="btn btn-info" role="button">Logout</a>
+            <a href="#" class="btn btn-info" role="button">Signup</a>
         </div>
     </nav>
     <?php if (isset($message)): ?>
