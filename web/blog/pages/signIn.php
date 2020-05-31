@@ -54,5 +54,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <br /><br />
 
-Or <a href="signUp.php">Sign up</a> for a new account.
+Or <a href="<?=$baseURI;?>sign-up">Sign up</a> for a new account.
 <?php require $basePath . '/partials/footer.php';?>

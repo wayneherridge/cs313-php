@@ -54,6 +54,16 @@ switch ($action) {
         require 'pages/post.php';
         exit;
         break;
+    case 'edit-post':
+        $title = "Edit Post";
+        require 'pages/admin/editPost.php';
+        exit;
+        break;
+    case 'delete-post':
+        $title = "Delete Post";
+        require 'pages/admin/deletePost.php';
+        exit;
+        break;
     default:
         echo '404: Page not found.';
         exit;
