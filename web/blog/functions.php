@@ -1,8 +1,10 @@
 <?php
-function sticky($field)
+function sticky($field, $post = [])
 {
-    if (isset($_POST[$field])) {
-        return $_POST[$field];
+    if (empty($field)) {
+        return $field;
+    } else if (isset($post[$field])) {
+        return $post[$field];
     } else {
         return "";
     }
