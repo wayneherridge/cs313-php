@@ -1,14 +1,15 @@
 <?php
 $user = protect();
 
+$user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
+$pDate = filter_input(INPUT_POST, 'pDate', FILTER_SANITIZE_STRING);
+$title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
+$body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_STRING);
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Post ID :: POST
     $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
-    $user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
-    $pDate = filter_input(INPUT_POST, 'pDate', FILTER_SANITIZE_STRING);
-    $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_STRING);
 
     if (empty($pDate) || empty($title) || empty($body)) {
         $message = "Missing Input";
@@ -49,7 +50,7 @@ $query->closeCursor();
     <input type="text" name="title" value="<?php sticky($title, $post);?>"><br />
 
     <label id="first">Post Content:</label><br />
-    <input type="text" name="body" value="<?php sticky($body);?>"><br />
+    <input type="text" name="body" value="<?php sticky($body, $post);?>"><br />
 
     <input type="hidden" name="user_id" value="<?=$user['id']?>">
 

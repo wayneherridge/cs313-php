@@ -7,8 +7,10 @@ $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
 $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_STRING);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
     if (empty($pDate) || empty($title) || empty($body)) {
         $message = "Missing Input";
+        exit;
     }
 
     $query = $db->prepare('INSERT INTO posts (user_id, pDate, title, body) VALUES (:user_id, :pDate, :title, :body)');
