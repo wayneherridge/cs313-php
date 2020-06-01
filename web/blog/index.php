@@ -103,7 +103,7 @@ switch ($action) {
             // Post ID :: POST
             $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
 
-            if (empty($pDate) || empty($title) || empty($body)) {
+            if (empty($pDate) || empty($title) || empty($body) || empty($post_id)) {
                 $message = "Missing Input";
             }
 

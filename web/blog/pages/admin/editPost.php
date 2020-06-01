@@ -11,8 +11,7 @@
 
     <input type="hidden" name="user_id" value="<?=$user['id']?>">
 
-    <input type="hidden" name="post_id" value="<?=$post['post_id'];?>">
-
+    <input type="hidden" name="post_id" value="<?=$post_id;?>">
     <button type="submit" name="save">Update Post</button>
 </form>
 <?php require $basePath . '/partials/footer.php';?>
