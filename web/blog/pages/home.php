@@ -22,6 +22,8 @@ $statement->closeCursor();
         <h5 class="card-title"><?=$post['title'];?></h5>
         <p class="card-text"><?=$post['body'];?></p>
         <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
+        <a href="<?=$baseURI?>edit-post?p=<?=$post['post_id']?>" class="btn btn-primary">Edit Post</a>
+        <a href="<?=$baseURI?>delete-post?p=<?=$post['post_id']?>" class="btn btn-primary">Delete Post</a>
       </div>
     </div>
   </div>

@@ -23,6 +23,8 @@ $query->closeCursor();
     <p><?=$blogpost['body'];?></p>
 
     <a href="<?=$baseURI?>">View All Posts</a>
+    <!-- delete button -->
+    <!-- edit button -->
 
 </div>
 
