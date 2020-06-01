@@ -1,45 +1,4 @@
-<?php
-$user = protect();
 
-$user_id = filter_input(INPUT_POST, 'user_id', FILTER_SANITIZE_NUMBER_INT);
-$pDate = filter_input(INPUT_POST, 'pDate', FILTER_SANITIZE_STRING);
-$title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING);
-$body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_STRING);
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-    // Post ID :: POST
-    $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
-
-    if (empty($pDate) || empty($title) || empty($body)) {
-        $message = "Missing Input";
-    }
-
-    $query = $db->prepare('UPDATE posts (pDate, title, body) VALUES (:pDate, :title, :body) WHERE post_id = :post_id');
-
-    $query->execute([':post_id' => $post_id, ':pDate' => $pDate, ':title' => $title, ':body' => $body]);
-
-    $result = $query->rowCount();
-
-    $query->closeCursor();
-
-    if ($result) {
-        header('Location: ' . $baseURI);
-    }
-} else {
-    // Post ID :: GET
-    $post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
-}
-
-// Get the Post from the DB
-$query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
-$query->execute(['post_id' => $post_id]);
-
-$post = $query->fetch(PDO::FETCH_ASSOC);
-
-$query->closeCursor();
-
-?>
 <?php require $basePath . '/partials/header.php';?>
 
 <form action="<?=$baseURI;?>" method="POST">
