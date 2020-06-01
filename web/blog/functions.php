@@ -1,6 +1,7 @@
 <?php
 function sticky($new, $old = null)
 {
+    var_dump($new . '<br>' . $old);
     if (!empty($new)) {
         return $new;
     }
