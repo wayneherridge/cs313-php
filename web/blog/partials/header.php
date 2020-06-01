@@ -40,9 +40,12 @@
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <?php if (!auth()): ?>
             <a href="<?=$baseURI?>sign-in" class="btn btn-info" role="button">Login</a>
-            <a href="<?=$baseURI?>sign-out" class="btn btn-info" role="button">Logout</a>
             <a href="<?=$baseURI?>sign-up" class="btn btn-info" role="button">Signup</a>
+            <?php else: ?>
+            <a href="<?=$baseURI?>sign-out" class="btn btn-info" role="button">Logout</a>
+            <?php endif;?>
         </div>
     </nav>
     <?php if (isset($message)): ?>

@@ -121,6 +121,7 @@ switch ($action) {
             }
 
         } else {
+            // Post ID:: Get
             $post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
         }
         // Get the Post from the DB
