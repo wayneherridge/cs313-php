@@ -105,7 +105,6 @@ switch ($action) {
 
             if (empty($pDate) || empty($title) || empty($body)) {
                 $message = "Missing Input";
-                exit;
             }
 
             $query = $db->prepare('UPDATE posts (pdate, title, body) VALUES (:pDate, :title, :body) WHERE post_id = :post_id');
@@ -118,12 +117,14 @@ switch ($action) {
 
             if ($result) {
                 header('Location: ' . $baseURI);
+                exit;
             }
 
         } else {
             // Post ID:: Get
             $post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
         }
+
         // Get the Post from the DB
         $query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
         $query->execute(['post_id' => $post_id]);

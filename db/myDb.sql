@@ -2,6 +2,7 @@
 /* Create the database*/
 CREATE DATABASE blog;
 
+c/ Blog
 /* This is my user table */
 CREATE TABLE public.user
 (
