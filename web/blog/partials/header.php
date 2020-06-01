@@ -35,14 +35,6 @@
                     <a class="nav-link <?php if ($currentPage == "Index") {?>active<?php }?>" href="<?=$baseURI?>">Home
                         <span class="sr-only">(current)</span></a>
                 </li>
-                <!-- <li class="nav-item active">
-                    <a class="nav-link <?php if ($currentPage == "About") {?>active<?php }?>" href="about.php">About Us
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link <?php if ($currentPage == "Contact") {?>active<?php }?>"
-                        href="contact.php">Contact Us </a>
-                </li> -->
             </ul>
             <form class="form-inline my-2 my-lg-0" action="index.php" method="GET">
                 <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">

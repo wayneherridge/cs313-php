@@ -1,4 +1,8 @@
 <?php
+// show edit and delete buttons if the admin is logged in.
+
+
+
 $post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
 
 if (empty($post_id)) {
@@ -23,9 +27,8 @@ $query->closeCursor();
     <p><?=$blogpost['body'];?></p>
 
     <a href="<?=$baseURI?>">View All Posts</a>
-    <!-- delete button -->
-    <!-- edit button -->
-
+    <a href="<?=$baseURI?>edit-post?p=<?=$post['post_id']?>" class="btn btn-primary">Edit Post</a>
+    <a href="<?=$baseURI?>delete-post?p=<?=$post['post_id']?>" class="btn btn-primary">Delete Post</a>
 </div>
 
 <?php require $basePath . '/partials/footer.php';
