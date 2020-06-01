@@ -106,16 +106,16 @@ switch ($action) {
             if (empty($pDate) || empty($title) || empty($body) || empty($post_id)) {
                 $query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
                 $query->execute(['post_id' => $post_id]);
-        
+
                 $post = $query->fetch(PDO::FETCH_ASSOC);
-        
+
                 $query->closeCursor();
 
                 $message = "Missing Input";
                 require 'pages/admin/editPost.php';
             }
 
-            $query = $db->prepare('UPDATE posts SET (pdate, title, body) VALUES (:pDate, :title, :body) WHERE post_id = :post_id');
+            $query = $db->prepare('UPDATE posts SET pdate = :pDate, title = :title, body = :body VALUES (:pDate, :title, :body WHERE post_id = :post_id');
 
             $query->execute([':post_id' => $post_id, ':pDate' => $pDate, ':title' => $title, ':body' => $body]);
 
