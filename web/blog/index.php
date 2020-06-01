@@ -115,9 +115,6 @@ switch ($action) {
 
             $query->closeCursor();
 
-            var_dump($result);
-            exit;
-
             if ($result) {
                 header('Location: ' . $baseURI);
                 exit;
