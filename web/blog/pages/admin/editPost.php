@@ -1,18 +1,14 @@
 <?php require $basePath . '/partials/header.php';?>
 
-<?php
-var_dump($post);
-?>
-
 <form action="<?=$baseURI;?>" method="POST">
     <label id="first"> Post Date:</label><br />
-    <input type="date" name="pDate" value="<?php sticky($pDate, $post['pdate']);?>"><br />
+    <input type="date" name="pDate" value="<?php echo sticky($pDate, $post['pdate']);?>"><br />
 
     <label id="first">Post Title:</label><br />
-    <input type="text" name="title" value="<?php sticky($title, $post['title']);?>"><br />
+    <input type="text" name="title" value="<?php echo sticky($title, $post['title']);?>"><br />
 
     <label id="first">Post Content:</label><br />
-    <input type="text" name="body" value="<?php sticky($body, $post['body']);?>"><br />
+    <input type="text" name="body" value="<?php echo sticky($body, $post['body']);?>"><br />
 
     <input type="hidden" name="user_id" value="<?=$user['id']?>">
 
