@@ -115,7 +115,7 @@ switch ($action) {
                 require 'pages/admin/editPost.php';
             }
 
-            $query = $db->prepare('UPDATE posts SET pdate = :pDate, title = :title, body = :body VALUES (:pDate, :title, :body WHERE post_id = :post_id');
+            $query = $db->prepare('UPDATE posts SET pdate = :pDate, title = :title, body = :body WHERE post_id = :post_id');
 
             $query->execute([':post_id' => $post_id, ':pDate' => $pDate, ':title' => $title, ':body' => $body]);
 
