@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 <?php require $basePath . '/partials/header.php';?>
-<form action="<?=$baseURI;?>add-post" method="POST">
+<form action="<?=$baseURI;?>edit-post" method="POST">
     <label id="first"> Post Date:</label><br />
     <input type="date" name="pDate" value="<?php sticky($pDate);?>"><br />
 
@@ -38,6 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <input type="hidden" name="user_id" value="<?=$user['id']?>">
 
-    <button type="submit" name="save">Add Post</button>
+    <button type="submit" name="save">Update Post</button>
 </form>
 <?php require $basePath . '/partials/footer.php';?>
