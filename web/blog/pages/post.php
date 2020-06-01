@@ -27,8 +27,8 @@ $query->closeCursor();
     <p><?=$blogpost['body'];?></p>
 
     <a href="<?=$baseURI?>">View All Posts</a>
-    <a href="<?=$baseURI?>edit-post?p=<?=$post['post_id']?>" class="btn btn-primary">Edit Post</a>
-    <a href="<?=$baseURI?>delete-post?p=<?=$post['post_id']?>" class="btn btn-primary">Delete Post</a>
+    <a href="<?=$baseURI?>edit-post?p=<?=$post['post_id']?>">Edit Post</a>
+    <a href="<?=$baseURI?>delete-post?p=<?=$post['post_id']?>">Delete Post</a>
 </div>
 
 <?php require $basePath . '/partials/footer.php';
