@@ -132,9 +132,6 @@ switch ($action) {
 
         $query->closeCursor();
 
-        var_dump($post);
-        die;
-
         // Display Form
         require 'pages/admin/editPost.php';
         exit;
