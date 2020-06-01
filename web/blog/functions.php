@@ -1,13 +1,13 @@
 <?php
 function sticky($new, $old)
 {
-    if (empty($new)) {
+    if (!empty($new)) {
         return $new;
-    } else if (isset($old)) {
-        return $old;
-    } else {
-        return "";
     }
+    if (isset($old)) {
+        return $old;
+    }
+    return "";
 }
 
 function auth()
