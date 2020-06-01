@@ -1,6 +1,6 @@
 <?php require $basePath . '/partials/header.php';?>
 
-<form action="<?=$baseURI;?>" method="POST">
+<form action="<?=$baseURI;?>edit-post" method="POST">
     <label id="first"> Post Date:</label><br />
     <input type="date" name="pDate" value="<?php echo sticky($pDate, $post['pdate']);?>"><br />
 
