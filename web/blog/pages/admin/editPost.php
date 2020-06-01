@@ -1,5 +1,9 @@
 <?php require $basePath . '/partials/header.php';?>
 
+<?php
+var_dump($post);
+?>
+
 <form action="<?=$baseURI;?>" method="POST">
     <label id="first"> Post Date:</label><br />
     <input type="date" name="pDate" value="<?php sticky($pDate, $post['pdate']);?>"><br />
