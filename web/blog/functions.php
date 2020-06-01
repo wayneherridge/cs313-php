@@ -1,5 +1,5 @@
 <?php
-function sticky($new, $old)
+function sticky($new, $old = null)
 {
     if (!empty($new)) {
         return $new;
