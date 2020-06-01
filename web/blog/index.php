@@ -70,7 +70,7 @@ switch ($action) {
                     exit;
                 }
 
-                $query = $db->prepare('INSERT INTO posts (user_id, pDate, title, body) VALUES (:user_id, :pDate, :title, :body)');
+                $query = $db->prepare('INSERT INTO posts (user_id, pdate, title, body) VALUES (:user_id, :pDate, :title, :body)');
 
                 $query->execute([':user_id' => $user_id, ':pDate' => $pDate, ':title' => $title, ':body' => $body]);
 
@@ -108,7 +108,7 @@ switch ($action) {
                 exit;
             }
 
-            $query = $db->prepare('UPDATE posts (pDate, title, body) VALUES (:pDate, :title, :body) WHERE post_id = :post_id');
+            $query = $db->prepare('UPDATE posts (pdate, title, body) VALUES (:pDate, :title, :body) WHERE post_id = :post_id');
 
             $query->execute([':post_id' => $post_id, ':pDate' => $pDate, ':title' => $title, ':body' => $body]);
 

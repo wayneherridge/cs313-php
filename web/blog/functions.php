@@ -1,10 +1,10 @@
 <?php
-function sticky($field, $post = [])
+function sticky($new, $old)
 {
-    if (empty($field)) {
-        return $field;
-    } else if (isset($post[$field])) {
-        return $post[$field];
+    if (empty($new)) {
+        return $new;
+    } else if (isset($old)) {
+        return $old;
     } else {
         return "";
     }
@@ -28,7 +28,8 @@ function guest()
     }
 }
 
-function protect() {
+function protect()
+{
     // Get the Authenticated User
     $user = auth();
     if (!$user) {
