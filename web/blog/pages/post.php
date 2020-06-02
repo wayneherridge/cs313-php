@@ -22,9 +22,9 @@ $query->closeCursor();
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
 
-    <a href="<?=$baseURI?>">View All Posts</a>
-    <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary">Edit Post</a>
-    <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary">Delete Post</a>
+    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
+    <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
+    <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>
 
 
 </div>

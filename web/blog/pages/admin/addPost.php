@@ -13,4 +13,7 @@
 
     <button type="submit" name="save">Add Post</button>
 </form>
+
+
+
 <?php require $basePath . '/partials/footer.php';?>
