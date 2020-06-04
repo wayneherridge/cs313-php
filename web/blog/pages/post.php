@@ -34,11 +34,11 @@ $query->closeCursor();
         <label id="first">Comment:</label><br />
         <input type="text" name="body" value="<?php echo sticky($body, $comments['body']); ?>"><br />
 
-        <input type="hidden" name="comment_id" value="<?=$post['id']?>">
+        <input type="hidden" name="comment_id" value="<?=$comments['id']?>">
 
         <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
         <button type="submit" name="save">Add Comment</button>
-    </form>
+    </form><br />
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
     <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
     <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>
