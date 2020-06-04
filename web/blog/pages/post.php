@@ -22,7 +22,23 @@ $query->closeCursor();
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
 
+    <?php require $basePath . '/partials/header.php';?>
+
     <?php if (!auth()): ?>
+
+    <form action="<?=$baseURI;?>view-post" method="POST">
+        <label id="first"> Comment Date:</label><br />
+        <input type="date" name="cdate" value="<?php echo sticky($cdate, $comments['cdate']); ?>"><br />
+
+        <label id="first">Comment:</label><br />
+        <input type="text" name="body" value="<?php echo sticky($body, $comments['body']); ?>"><br />
+
+        <input type="hidden" name="comment_id" value="<?=$post['id']?>">
+
+        <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
+        <button type="submit" name="save">Add Comment</button>
+    </form>
+
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
     <?php else: ?>
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
