@@ -25,6 +25,7 @@ $query->closeCursor();
     <?php if (!auth()): ?>
 
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
+
     <?php else: ?>
 
     <form action="<?=$baseURI;?>view-post" method="POST">
@@ -39,6 +40,7 @@ $query->closeCursor();
         <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
         <button type="submit" name="save">Add Comment</button>
     </form><br />
+
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
     <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
     <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>

@@ -2,21 +2,20 @@
 /* Create the database*/
 CREATE DATABASE blog;
 
-c/ Blog
+\c blog
 /* This is my user table */
-CREATE TABLE public.user
+CREATE TABLE public.users
 (
-	user_id SERIAL NOT NULL PRIMARY KEY,
+	id SERIAL NOT NULL PRIMARY KEY,
 	username VARCHAR(100) NOT NULL UNIQUE,
-	password VARCHAR(100) NOT NULL,
-	display_name VARCHAR(100) NOT NULL
+	password VARCHAR(100) NOT NULL
 );
 
 /* This is my posts table */
 CREATE TABLE public.posts
 (
 	post_id SERIAL NOT NULL PRIMARY KEY,
-	user_id INT NOT NULL REFERENCES public.user(user_id),
+	user_id INT NOT NULL REFERENCES public.users(id),
 	pDate DATE,
 	title VARCHAR(100),
 	body TEXT NOT NULL
@@ -27,7 +26,7 @@ CREATE TABLE public.tags
 (
 	tag_id SERIAL NOT NULL PRIMARY KEY,
 	body TEXT NOT NULL
-)
+);
 
 /* This links the posts and tags table together */
 CREATE TABLE public.post_tags
@@ -35,7 +34,7 @@ CREATE TABLE public.post_tags
 	post_tags_id SERIAL NOT NULL PRIMARY KEY,
 	post_id INT NOT NULL REFERENCES public.posts(post_id),
 	tag_id INT NOT NULL REFERENCES public.tags(tag_id)
-)
+);
 
 /* This table is the comments table */
 CREATE TABLE public.comments
