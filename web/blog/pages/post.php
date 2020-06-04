@@ -34,9 +34,8 @@ $query->closeCursor();
         <label id="first">Comment:</label><br />
         <input type="text" name="body" value="<?php echo sticky($body, $comments['body']); ?>"><br />
 
-        <input type="hidden" name="comment_id" value="<?=$comments['comment_id']?>">
+        <input type="hidden" name="post_id" value="<?=$post_id?>">
 
-        <input type="hidden" name="post_id" value="<?=$post_id;?>">
         <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
         <button type="submit" name="save">Add Comment</button>
     </form><br />
