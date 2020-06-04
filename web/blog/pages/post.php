@@ -22,8 +22,6 @@ $query->closeCursor();
     <p><?=$blogpost['pdate'];?></p>
     <p><?=$blogpost['body'];?></p>
 
-    <?php require $basePath . '/partials/header.php';?>
-
     <?php if (!auth()): ?>
 
     <form action="<?=$baseURI;?>view-post" method="POST">
