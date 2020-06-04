@@ -24,6 +24,9 @@ $query->closeCursor();
 
     <?php if (!auth()): ?>
 
+    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
+    <?php else: ?>
+
     <form action="<?=$baseURI;?>view-post" method="POST">
         <label id="first"> Comment Date:</label><br />
         <input type="date" name="cdate" value="<?php echo sticky($cdate, $comments['cdate']); ?>"><br />
@@ -36,9 +39,6 @@ $query->closeCursor();
         <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
         <button type="submit" name="save">Add Comment</button>
     </form>
-
-    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
-    <?php else: ?>
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
     <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
     <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>
