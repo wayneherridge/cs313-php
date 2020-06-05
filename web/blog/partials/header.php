@@ -44,6 +44,7 @@
             <a href="<?=$baseURI?>sign-in" class="btn btn-info" role="button">Login</a>
             <a href="<?=$baseURI?>sign-up" class="btn btn-info" role="button">Signup</a>
             <?php else: ?>
+            <a href="<?=$baseURI?>add-post" class="btn btn-info" role="button">Add Post</a>
             <a href="<?=$baseURI?>sign-out" class="btn btn-info" role="button">Logout</a>
             <?php endif;?>
         </div>
