@@ -16,15 +16,15 @@ $statement->closeCursor();
 <?php foreach ($blogposts as $post): ?>
 
 <div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"><?=$post['title'];?></h5>
-        <p class="card-text"><?=$post['body'];?></p>
-        <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
-      </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><?=$post['title'];?></h5>
+                <p class="card-text"><?=$post['body'];?></p>
+                <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <!-- <div>
@@ -34,5 +34,6 @@ $statement->closeCursor();
     <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
 </div> -->
 <?php endforeach;?>
+<h1>test</h1>
 
 <?php require $basePath . '/partials/footer.php';
