@@ -2,11 +2,15 @@ main, header {
     margin: 0 10px 0 10px;
 }
 
+
+
 .row {
+    width: 50%;
     margin: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer {
