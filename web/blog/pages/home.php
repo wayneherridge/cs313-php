@@ -20,7 +20,7 @@ $statement->closeCursor();
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><?=$post['title'];?></h5>
-                <p class="card-text"><sub><?=$post['pDate'];?></sub></p>
+                <p class="card-text"><sub><?=$post['pdate'];?></sub></p>
                 <p class="card-text"><?=$post['body'];?></p>
                 <a href="<?=$baseURI?>view-post?p=<?=$post['post_id']?>" class="btn btn-primary">View Post</a>
             </div>
