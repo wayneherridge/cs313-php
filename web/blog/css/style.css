@@ -5,7 +5,6 @@ main, header {
 
 
 .row {
-    width: 50%;
     margin: 5px;
     display: flex;
     flex-direction: row;
