@@ -4,10 +4,13 @@ main, header {
 
 .row {
     margin: 5px;
-    display: flex;
 }
 
 .card {
+    display: flex;
+}
+
+.card-body {
     flex-wrap: wrap-reverse;
 }
 
