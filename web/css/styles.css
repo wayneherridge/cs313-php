@@ -27,14 +27,6 @@
         display: inline-flex;
     }
     
-    .jumbotron {
-        color: #17a2b8;
-    }
-    
-    .jumbotron p {
-        color: black;
-    }
-    
     #app {
         color: red;
         display: flex;
@@ -65,6 +57,10 @@
         text-align: center;
     }
     
+    .row {
+        margin: 5px;
+    }
+
     .footer {
         text-align: center;
         width: 100%;
