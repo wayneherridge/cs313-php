@@ -32,13 +32,21 @@ function protect()
 {
     // Get the Authenticated User
     $user = auth();
-    if (!$user) {
+    if (!isAdmin()) {
         return header('Location: ' . $baseURI . '/');
         exit;
     }
+    return $user;
+}
+
+function isAdmin()
+{
+    $user = auth();
+    if (!$user) {
+        return false;
+    }
     if (!$user['admin']) {
-        return header('Location: ' . $baseURI . '/');
-        exit;
+        return false;
     }
     return $user;
 }
