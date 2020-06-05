@@ -146,13 +146,22 @@ switch ($action) {
         exit;
         break;
     case 'delete-post':
-        $title = "Delete Post";
-
         $user = protect();
 
-        
-        
-        require 'pages/admin/deletePost.php';
+        $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
+
+        $query = $db->prepare('DELETE FROM posts WHERE post_id = :post_id');
+        $query->execute(['post_id' => $post_id]);
+
+        $result = $query->rowCount();
+
+        $query->closeCursor();
+
+        if ($result) {
+            view('/posts/');
+        }
+
+        redirect('/');
         exit;
         break;
     default:

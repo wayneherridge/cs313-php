@@ -22,13 +22,9 @@ $query->closeCursor();
     <p><sub><?=$blogpost['pdate'];?></sub></p>
     <p><?=$blogpost['body'];?></p>
 
-    <?php if (!auth()): ?>
+    <?php if (auth()): ?>
 
-    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
-
-    <?php else: ?>
-
-    <form action="<?=$baseURI;?>view-post" method="POST">
+    <form action="<?=$baseURI;?>add-comment" method="POST">
         <label id="first"> Comment Date:</label><br />
         <input type="date" name="cdate" value="<?php echo sticky($cdate, $comments['cdate']); ?>"><br />
 
@@ -41,11 +37,14 @@ $query->closeCursor();
         <button type="submit" name="save">Add Comment</button>
     </form><br />
 
-    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
-    <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
-    <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>
     <?php endif;?>
 
+    <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
+
+    <?php if (protect()): ?>
+    <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
+    <a href="<?=$baseURI?>delete-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Delete Post</a>
+    <?php endif; ?>
 </div>
 
-<?php require $basePath . '/partials/footer.php';
+<?php require $basePath . '/partials/footer.php';?>
