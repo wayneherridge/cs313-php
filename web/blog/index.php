@@ -161,7 +161,7 @@ switch ($action) {
             view('/posts/');
         }
 
-        redirect('/');
+        header('Location: ' . $baseURI);
         exit;
         break;
     default:

@@ -50,9 +50,3 @@ function isAdmin()
     }
     return $user;
 }
-
-function redirect($uri)
-{
-    header('Location: ' . $baseURI . $uri);
-    exit;
-}

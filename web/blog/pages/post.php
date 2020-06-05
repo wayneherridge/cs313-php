@@ -41,11 +41,11 @@ $query->closeCursor();
 
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
 
-    <?php if (protect()): ?>
+    <?php if (isAdmin()): ?>
     <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
     <form action="<?=$baseURI;?>delete-post" method="POST">
         <input type="hidden" name="post_id" value="<?=$blogpost['post_id'];?>">
-        <input type="submit" class="btn btn-primary btn-sm" value="Delete Post">
+        <input type="submit" class="btn btn-warning btn-sm" value="Delete Post">
     </form>
     <?php endif;?>
 </div>
