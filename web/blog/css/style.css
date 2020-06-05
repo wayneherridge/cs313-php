@@ -7,6 +7,10 @@ main, header {
     display: flex;
 }
 
+.card {
+    flex-wrap: wrap-reverse;
+}
+
 .footer {
     font-size: 14px;
     text-align: center;
