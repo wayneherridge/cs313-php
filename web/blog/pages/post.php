@@ -19,7 +19,7 @@ $query->closeCursor();
 
 <div>
     <h3><?=$blogpost['title'];?></h3>
-    <p><?=$blogpost['pdate'];?></p>
+    <p><sub><?=$blogpost['pdate'];?></sub></p>
     <p><?=$blogpost['body'];?></p>
 
     <?php if (!auth()): ?>
