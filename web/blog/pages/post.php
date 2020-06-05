@@ -45,9 +45,9 @@ $query->closeCursor();
     <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
     <form action="<?=$baseURI;?>delete-post" method="POST">
         <input type="hidden" name="post_id" value="<?=$blogpost['post_id'];?>">
-        <input type="text" class="btn btn-primary btn-sm" value="Delete Post">
+        <input type="submit" class="btn btn-primary btn-sm" value="Delete Post">
     </form>
     <?php endif;?>
 </div>
 
-<?php require $basePath . '/partials/footer.php';?>in
+<?php require $basePath . '/partials/footer.php';?>
