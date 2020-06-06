@@ -1,14 +1,15 @@
 
 /* Create the database*/
-CREATE DATABASE blog;
+CREATE DATABASE Blog;
 
-\c blog
+\c Blog
 /* This is my user table */
 CREATE TABLE public.users
 (
 	id SERIAL NOT NULL PRIMARY KEY,
 	username VARCHAR(100) NOT NULL UNIQUE,
-	password VARCHAR(100) NOT NULL
+	password VARCHAR(255) NOT NULL,
+	admin SMALLINT
 );
 
 /* This is my posts table */
@@ -16,8 +17,8 @@ CREATE TABLE public.posts
 (
 	post_id SERIAL NOT NULL PRIMARY KEY,
 	user_id INT NOT NULL REFERENCES public.users(id),
-	pDate DATE,
-	title VARCHAR(100),
+	pDate DATE NOT NULL,
+	title VARCHAR(100) NOT NULL,
 	body TEXT NOT NULL
 );
 
@@ -41,6 +42,6 @@ CREATE TABLE public.comments
 (
 	comment_id SERIAL NOT NULL PRIMARY KEY,
 	post_id INT NOT NULL REFERENCES public.posts(post_id),
-	cdate DATE,
-	body TEXT
+	cdate DATE NOT NULL,
+	body TEXT NOT NULL
 );
