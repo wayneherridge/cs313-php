@@ -3,6 +3,7 @@
 CREATE DATABASE Blog;
 
 \c Blog
+
 /* This is my user table */
 CREATE TABLE public.users
 (
