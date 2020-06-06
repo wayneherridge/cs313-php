@@ -46,6 +46,31 @@ switch ($action) {
         break;
     case 'view-post':
         $title = "View Post";
+
+        // Post
+        $post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
+
+        if (empty($post_id)) {
+            die('Post does not exist');
+        }
+
+        $query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
+
+        $query->execute([':post_id' => $post_id]);
+
+        $blogpost = $query->fetch(PDO::FETCH_ASSOC);
+
+        // Comments
+        $query->closeCursor();
+
+        $query = $db->prepare('SELECT * FROM comments WHERE post_id = :post_id');
+
+        $query->execute([':post_id' => $post_id]);
+
+        $comments = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        $query->closeCursor();
+
         require 'pages/post.php';
         exit;
         break;
@@ -103,7 +128,7 @@ switch ($action) {
             // Post ID :: POST
             $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
 
-            if (empty($pDate) || empty($title) || empty($body) || empty($post_id)) {
+            if (empty($pDate) || empty($title) || empty($body)) {
                 $query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
                 $query->execute(['post_id' => $post_id]);
 
@@ -113,6 +138,7 @@ switch ($action) {
 
                 $message = "Missing Input";
                 require 'pages/admin/editPost.php';
+                exit;
             }
 
             $query = $db->prepare('UPDATE posts SET pdate = :pDate, title = :title, body = :body WHERE post_id = :post_id');
@@ -150,6 +176,11 @@ switch ($action) {
 
         $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
 
+        if (empty($post_id)) {
+            header('Location: ' . $baseURI);
+            exit;
+        }
+
         $query = $db->prepare('DELETE FROM posts WHERE post_id = :post_id');
         $query->execute(['post_id' => $post_id]);
 
@@ -158,10 +189,55 @@ switch ($action) {
         $query->closeCursor();
 
         if ($result) {
-            view('/posts/');
+            require 'pages/view-post?p=' . $post_id;
+            exit;
         }
 
         header('Location: ' . $baseURI);
+        exit;
+        break;
+    case 'add-comment':
+        $user = auth();
+        if (!auth()) {
+            return header('Location: ' . $baseURI . '/login');
+            exit;
+        }
+
+        $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
+        $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_STRING);
+
+        if (empty($body)) {
+            $message = 'Please enter a valid comment.';
+            require 'pages/view-post?p=' . $post_id;
+            exit;
+        }
+
+        $query = $db->prepare('INSERT INTO comments (post_id, body) VALUES (:post_id, :body)');
+
+        $query->execute([
+            'post_id' => $post_id,
+            'body' => $body,
+        ]);
+
+        $result = $query->rowCount();
+
+        $query->closeCursor();
+
+        header('Location: ' . $baseURI . 'view-post?p=' . $post_id);
+        exit;
+        break;
+    case 'delete-comment':
+        $user = protect();
+
+        $comment_id = filter_input(INPUT_POST, 'comment_id', FILTER_SANITIZE_NUMBER_INT);
+        $post_id = filter_input(INPUT_POST, 'post_id', FILTER_SANITIZE_NUMBER_INT);
+
+        $query = $db->prepare('DELETE FROM comments WHERE comment_id = :comment_id');
+        $query->execute([':comment_id' => $comment_id]);
+
+        $query->closeCursor();
+
+        header('Location: ' . $baseURI . 'view-post?p=' . $post_id);
         exit;
         break;
     default:

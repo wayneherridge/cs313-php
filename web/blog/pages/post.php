@@ -1,21 +1,4 @@
-<?php
-$post_id = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
-
-if (empty($post_id)) {
-    die('Post does not exist');
-}
-
-$query = $db->prepare('SELECT * FROM posts WHERE post_id = :post_id');
-
-$query->execute([':post_id' => $post_id]);
-
-$blogpost = $query->fetch(PDO::FETCH_ASSOC);
-
-$query->closeCursor();
-?>
 <?php require $basePath . '/partials/header.php';?>
-
-
 
 <div>
     <h3><?=$blogpost['title'];?></h3>
@@ -25,15 +8,12 @@ $query->closeCursor();
     <?php if (auth()): ?>
 
     <form action="<?=$baseURI;?>add-comment" method="POST">
-        <label id="first"> Comment Date:</label><br />
-        <input type="date" name="cdate" value="<?php echo sticky($cdate, $comments['cdate']); ?>"><br />
 
         <label id="first">Comment:</label><br />
-        <input type="text" name="body" value="<?php echo sticky($body, $comments['body']); ?>"><br />
+        <input type="text" name="body"><br />
 
         <input type="hidden" name="post_id" value="<?=$post_id?>">
 
-        <input type="hidden" name="comment_id" value="<?=$comment_id;?>">
         <button type="submit" name="save">Add Comment</button>
     </form><br />
 
@@ -42,12 +22,27 @@ $query->closeCursor();
     <a href="<?=$baseURI?>" class="btn btn-primary btn-sm">View All Posts</a>
 
     <?php if (isAdmin()): ?>
-    <a href="<?=$baseURI?>edit-post?p=<?=$blogpost['post_id']?>" class="btn btn-primary btn-sm">Edit Post</a>
+    <a href="<?=$baseURI;?>edit-post?p=<?=$blogpost['post_id'];?>" class="btn btn-primary btn-sm">Edit Post</a>
     <form action="<?=$baseURI;?>delete-post" method="POST">
         <input type="hidden" name="post_id" value="<?=$blogpost['post_id'];?>">
-        <input type="submit" class="btn btn-warning btn-sm" value="Delete Post">
+        <input type="submit" class="btn btn-danger btn-sm" value="Delete Post">
     </form>
     <?php endif;?>
+
+    <?php foreach ($comments as $comment): ?>
+    <div class="card">
+        <div class="card-body">
+            <p><?=$comment['body'];?></p>
+            <form action="<?=$baseURI;?>delete-comment" method="POST">
+                <input type="hidden" value="<?=$comment['comment_id'];?>" name="comment_id">
+                <input type="hidden" name="post_id" value="<?=$blogpost['post_id'];?>">
+                <?php if (isAdmin()): ?>
+                <input type="submit" class="btn btn-danger btn-sm" value="Delete Comment">
+                <?php endif;?>
+            </form>
+        </div>
+    </div>
+    <?php endforeach;?>
 </div>
 
 <?php require $basePath . '/partials/footer.php';?>
