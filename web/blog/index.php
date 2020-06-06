@@ -189,7 +189,7 @@ switch ($action) {
         $query->closeCursor();
 
         if ($result) {
-            require 'pages/view-post?p=' . $post_id;
+            require '/pages/view-post?p=' . $post_id;
             exit;
         }
 
