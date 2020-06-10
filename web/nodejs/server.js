@@ -2,7 +2,6 @@
 var http = require('http');
 var port = "8888";
 
-
 function pages(req, res) {
 	console.log("Received a Request for " + req.url);
 
@@ -24,8 +23,7 @@ function pages(req, res) {
 		res.end();
 
 	} else {
-
-		response.writeHead(404, { "Content-Type": "text/html" });
+		res.writeHead(404, { 'Content-Type': 'text/html' });
 		res.write("<p>Page not found</p>");
 		res.end();
 	}
